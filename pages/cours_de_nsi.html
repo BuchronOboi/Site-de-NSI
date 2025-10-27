@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="clair">
+
+<head>
+	<title> NSI - Clément LEVAL </title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../styles/style_principal.css" type="text/css" />
+</head>
+
+<body class="light">
+	<div id="entete-de-page">
+		NSI - Clément LEVAL
+	</div> </br>
+
+	<table id="bloc-menu">
+		<th> <a href=../index.html>🏠 Accueil</a> </th>
+		<th> <a href="pages/cours_de_nsi.html">📒 Cours de NSI</a></th>
+		<th> <a href="pages/quiz_test.html">Quiz / tests</a> </th>
+		<th> <a href="pages/tutoriels.html">Tutoriels</a> </th>
+		<th> <a href="pages/projets.html">Projets</a> </th>
+		<th> <a href="pages/a_propos.html">À propos</a> </th>
+		<th> <a href="#" id="theme-toggle">Basculer ☀️/🌑</a> </th>
+	</table>
+	<div id="grand-texte">📒 Cours de NSI </div>
+	<div id="contenu">
+	
+	</div> <br />
+
+</body>
+<script>/* Java Script pour le mode sombre */
+	const toggle = document.getElementById('theme-toggle');
+	const body = document.body;
+
+	// Charger la préférence enregistrée
+	if (localStorage.getItem('theme') === 'dark') {
+		body.classList.add('dark-mode');
+	}
+
+	toggle.addEventListener('click', () => {
+		body.classList.toggle('dark-mode');
+		const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+		localStorage.setItem('theme', theme);
+	});
+</script>
+
+</html>
