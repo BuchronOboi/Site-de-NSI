@@ -1,9 +1,11 @@
 /*Liens*/
+
 body {
 	padding: 10px;
 	background-color: #fffeea;
 	font-family: Arial, sans-serif;
 	font-size: 16px;
+	transition: 0.3s, color 0.3s;
 }
 
 body.dark-mode {
@@ -67,57 +69,104 @@ body.dark-mode #bloc-menu {
 }
 
 
-
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: Avenir, sans-serif;
+}
 
 nav {
+	border: 5px solid #141316;
+	border-radius: 20px;
 	width: 100%;
 	background-color: white;
-	border: 5px solid;
+}
+body.dark-mode nav {
+	background-color: #141316;
+	border: 5px solid #c9bd1d;
+}
+nav ul {
 	border-radius: 20px;
-	font-weight: bold;
-}
-nav ul{
-    list-style-type: none;
+	list-style-type: none;
 	display: flex;
- 	justify-content: space-between; 
+	justify-content: space-between;
+
+} 
+body.dark-mode nav ul {
+	background-color: #141316;
 }
 
-nav a{
-    display: block;
-    color: black;
-    padding: 10px ;
+nav ul li {
+	float: none;
+	text-align: center;
+	width: auto;
+	flex: 1;
 }
 
-nav a:hover{
-    color: rgb(0, 0, 0);
-    border: 2px solid rgb(0, 0, 0);
-	border-radius: 15px;
+nav ul::after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
-.sous{
-    display: none;
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-	border-radius: 15px;
-}
-nav > ul li:hover .sous{
-    display: block;
-}
-.sous li{
+nav a {
+	display: block;
+	text-decoration: none;
+	color: black;
+	border: 2px solid transparent;
+	padding: 10px 0px;
 
+}
 
-    text-align: center;
+body.dark-mode nav a {
+	color: white;
 }
-.sous a{
-	border: none;
+
+nav a:hover {
+	color: rgb(0, 0, 0);
+	border: 2px solid rgb(0, 0, 0);
+	border-radius: 20px;
+	
 }
-.sous a:hover{
-    border: none;
-    background-color: #b6c7ce;
+body.dark-mode nav a:hover {
+	background-color: #c9bd1d8e;
 }
-.deroulant > a::after{
-    content:" ▼";
-    font-size: 12px;
+
+.sous {
+	display: none;
+	box-shadow: 0px 1px 2px #CCC;
+	background-color: white;
+	position: absolute;
+	border-radius: 20px;
+	width: 16.66%;
+	z-index: 1000;
+}
+
+nav>ul li:hover .sous {
+	display: block;
+}
+
+.sous li {
+	float: none;
+	width: 100%;
+	text-align: left;
+
+}
+
+.sous a {
+	padding: 10px;
+	border-bottom: none;
+	border: 2px solid transparent;
+}
+
+.sous a:hover {
+	border: 2px solid black;
+	background-color: RGBa(200, 200, 200, 0.1);
+}
+
+.deroulant>a::after {
+	content: " ▼";
+	font-size: 12px;
 }
 
 
