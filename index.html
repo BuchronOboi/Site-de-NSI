@@ -7,31 +7,12 @@
 	<link rel="stylesheet" href="styles/style_principal.css" type="text/css" />
 </head>
 
-
 <body>
 	<div id="entete-de-page">
 		NSI - Clément LEVAL
-	</div>
-	<nav>
+	</div><br>
+	<div id="menu-placeholder"></div>
 
-		<ul>
-			<li><a href="index.html">🏠 Accueil</a></li>
-			<li class="deroulant"><a href="pages/cours_de_nsi.html">📒 Cours&ensp;</a>
-				<ul class="sous">
-					<li><a href="pages/fiches/fiche1/fiche_1.html">Fiche 1</a></li>
-					<li><a href="pages/fiches/fiche2/fiche2.html">Fiche 2</a></li>
-					<li><a href="pages/fiches/fiche3/fiche3.html">Fiche 3</a></li>
-				</ul>
-			</li>
-			<li><a href="pages/quiz_test.html">Quiz / tests</a></li>
-			<li><a href="pages/tutoriels.html">Tutoriels</a></li>
-			<li><a href="pages/a_propos.html">À propos</a></li>
-			<li><a href="#" class="theme-toggle">Basculer ☀️/🌑</a></li>
-
-
-
-		</ul>
-	</nav>
 
 
 
@@ -50,25 +31,44 @@
 
 
 
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const toggles = document.querySelectorAll('.theme-toggle');
-			const body = document.body;
 
-			if (localStorage.getItem('theme') === 'dark') {
-				body.classList.add('dark-mode');
-			}
-
-			toggles.forEach(btn => {
-				btn.addEventListener('click', () => {
-					body.classList.toggle('dark-mode');
-					const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
-					localStorage.setItem('theme', theme);
-				});
-			});
-		});
-	</script>
 </body>
+<script>
+fetch("/pages/menu.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("menu-placeholder").innerHTML = data;
+
+    // -- init du mode sombre (exécuté immédiatement après l'injection) --
+    (function initTheme() {
+      const body = document.body;
+
+      // appliquer la préférence sauvegardée
+      if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+      }
+
+     // trouver tous les boutons/éléments qui doivent toggler le thème
+      const toggles = document.querySelectorAll('.theme-toggle');
+
+      // sécuritiy check si aucun toggle trouvé
+      /* if (!toggles || toggles.length === 0) {
+        // console.log('Aucun .theme-toggle trouvé'); // décommenter pour debug
+        return;
+      } */
+
+      toggles.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault(); // au cas où c'est un <a>
+          body.classList.toggle('dark-mode');
+          const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+          localStorage.setItem('theme', theme);
+        });
+      });
+    })();
+  })
+	// .catch(err => console.error("Erreur de chargement du menu :", err));
+</script>
 
 
 </html>
