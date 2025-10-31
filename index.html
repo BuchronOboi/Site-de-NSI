@@ -2,72 +2,71 @@
 <html lang="fr" data-theme="clair">
 
 <head>
-	<title> NSI - Clément LEVAL </title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="styles/style_principal.css" type="text/css" />
+  <title> NSI - Clément LEVAL </title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles/style_principal.css" type="text/css" />
 </head>
 
 <body>
-	<div id="entete-de-page">
-		NSI - Clément LEVAL
-	</div><br>
-	<div id="menu-placeholder"></div>
+  <div id="entete-de-page">
+    NSI - Clément LEVAL
+  </div><br>
+  <div id="menu-placeholder"></div>
 
 
 
 
-	<div id="grand-texte">🏠 Accueil</div>
-	<div id="contenu">
-		<img src="images/invaders.jpg" alt="image d'un invader" width="180" />
-		<h2> Je me présente...</h2>
-		<p> Je suis Tom amateur de jeux vidéo. <br />
-			Je partage avec vous sur ce site mes expériences de joueur et <br> mon point de vue perso sur les jeux et
-			les Web-vidéo.</p>
-		<p> Parce que jouer, c'est bien, <br /> mais apprendre, c'est mieux !</p>
-		<br /> <br />
+  <div id="grand-texte">🏠 Accueil</div>
+  <div id="contenu">
+    <img src="images/invaders.jpg" alt="image d'un invader" width="180" />
+    <h2> Je me présente...</h2>
+    <p> Je suis Tom amateur de jeux vidéo. <br />
+      Je partage avec vous sur ce site mes expériences de joueur et <br> mon point de vue perso sur les jeux et
+      les Web-vidéo.</p>
+    <p> Parce que jouer, c'est bien, <br /> mais apprendre, c'est mieux !</p>
+    <br /> <br />
 
-		<hr>
-	</div> <br />
-
+    <hr>
+  </div> <br />
 
 
 
 </body>
 <script>
-fetch("/pages/menu.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("menu-placeholder").innerHTML = data;
+  fetch("/pages/menu.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("menu-placeholder").innerHTML = data;
 
-    // -- init du mode sombre (exécuté immédiatement après l'injection) --
-    (function initTheme() {
-      const body = document.body;
+      // -- init du mode sombre (exécuté immédiatement après l'injection) --
+      (function initTheme() {
+        const body = document.body;
 
-      // appliquer la préférence sauvegardée
-      if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-mode');
-      }
+        // appliquer la préférence sauvegardée
+        if (localStorage.getItem('theme') === 'dark') {
+          body.classList.add('dark-mode');
+        }
 
-     // trouver tous les boutons/éléments qui doivent toggler le thème
-      const toggles = document.querySelectorAll('.theme-toggle');
+        // trouver tous les boutons/éléments qui doivent toggler le thème
+        const toggles = document.querySelectorAll('.theme-toggle');
 
-      // sécuritiy check si aucun toggle trouvé
-      /* if (!toggles || toggles.length === 0) {
-        // console.log('Aucun .theme-toggle trouvé'); // décommenter pour debug
-        return;
-      } */
+        // sécuritiy check si aucun toggle trouvé
+        /* if (!toggles || toggles.length === 0) {
+          // console.log('Aucun .theme-toggle trouvé'); // décommenter pour debug
+          return;
+        } */
 
-      toggles.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault(); // au cas où c'est un <a>
-          body.classList.toggle('dark-mode');
-          const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
-          localStorage.setItem('theme', theme);
+        toggles.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault(); // au cas où c'est un <a>
+            body.classList.toggle('dark-mode');
+            const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+          });
         });
-      });
-    })();
-  })
-	// .catch(err => console.error("Erreur de chargement du menu :", err));
+      })();
+    })
+  // .catch(err => console.error("Erreur de chargement du menu :", err));
 </script>
 
 

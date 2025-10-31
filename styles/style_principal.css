@@ -14,8 +14,14 @@ body.dark-mode {
 }
 
 img {
-	float: left;
+	border: 2px solid black;
+	border-radius: 20px;
 	margin-right: 20px;
+	width: 500px;
+}
+
+#surligner-en-gris {
+	background: #ababab8e;
 }
 
 #entete-de-page {
@@ -168,22 +174,43 @@ nav>ul li:hover .sous {
 	border: 2px solid black;
 	background-color: RGBa(200, 200, 200, 0.1);
 }
+body.dark-mode .sous a:hover {
+	border: 2px solid transparent;
+}
 
 .deroulant>a::after {
 	content: " ▼";
 	font-size: 12px;
 }
 
-
+#bloc-ressources {
+	margin: 10px;
+	margin-left: 15px;
+	padding: 10px;
+	padding-bottom: 15px;
+	background-color: #d6caff;
+	border: 3px solid black;
+	border-radius: 20px;
+	font-size: 16px;
+}
+body.dark-mode #bloc-ressources {
+	border: 3px solid #ffffff;
+	background-color: #243238;
+}
+#bloc-ressources a:visited {
+	color: #914141;
+}
 
 #grand-texte {
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: bold;
 	padding-top: 20px;
+	padding-bottom: 10px;
 }
 
 #contenu {
 	color: black;
+	font-size: 16px;
 	padding-left: 20px;
 }
 
