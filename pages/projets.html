@@ -2,42 +2,63 @@
 <html lang="fr">
 
 <head>
-	<title> Top 10 de Tom </title>
+	<title> NSI - Clément LEVAL </title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="../styles/style-de-Tom.css" type="text/css" />
+	<base href="http://127.0.0.1:5500/Site-de-NSI/">
+	<link rel="stylesheet" href="/styles/style_principal.css" type="text/css" />
 </head>
 
 <body>
-	<div id="entete-de-page"> 
-		<p> Le top 10 de Tom <br/>
-		des jeux vidéo et Web-vidéo </p>
-	</div> 
-	
-	<table id="bloc-menu" border="1">
-	<tr>
-		<th> <a href="../index.html">Accueil</a> </th>
-		<th> <a href="top10.html">Top 10</a> </th>
-		<th> <a href="reportages.html">Reportages</a> </th>
-		<th> <a href="tutos.html">Tutoriels</a> </th>
-		<th> <a href="curiosites.html">Curiosités</a> </th>
-		<th> <a href="archives.htlm">Archives</a> </th>
-	</tr>
-	</table> <br/> 
-	
-	<div id="contenu">
-		<h1> Curiosités </h1>
-		
-		
-		
-		
-		
-	</div> <br/> 
-	
-	<div id="pied-de-page">
-		<p> Projet SNT - Dernière mise à jour : ... <br/>
-		Les textes et images utilisés n'engagent que son auteur : Tom </p>
-	</div> <br/> 
+  <div id="entete-de-page">
+    NSI - Clément LEVAL
+  </div><br>
+  <div id="menu-placeholder"></div>
+
+
+
+
+  <div id="grand-texte">🛠️ Projets</div><br>
+  <h1>Cette page est encore vide, mais elle sera bientôt opérationelle !</h1>
+  </div> <br />
+
+
 
 </body>
+<script>
+  fetch("/pages/menu.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("menu-placeholder").innerHTML = data;
+
+      // -- init du mode sombre (exécuté immédiatement après l'injection) --
+      (function initTheme() {
+        const body = document.body;
+
+        // appliquer la préférence sauvegardée
+        if (localStorage.getItem('theme') === 'dark') {
+          body.classList.add('dark-mode');
+        }
+
+        // trouver tous les boutons/éléments qui doivent toggler le thème
+        const toggles = document.querySelectorAll('.theme-toggle');
+
+        // sécuritiy check si aucun toggle trouvé
+        /* if (!toggles || toggles.length === 0) {
+          // console.log('Aucun .theme-toggle trouvé'); // décommenter pour debug
+          return;
+        } */
+
+        toggles.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault(); // au cas où c'est un <a>
+            body.classList.toggle('dark-mode');
+            const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+          });
+        });
+      })();
+    })
+  // .catch(err => console.error("Erreur de chargement du menu :", err));
+</script>
 
 </html>
