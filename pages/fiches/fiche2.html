@@ -4,7 +4,7 @@
 <head>
   <title> NSI - Clément LEVAL </title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="../../../styles/style_principal.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/style_principal.css" type="text/css" />
 </head>
 
 <body>
@@ -17,33 +17,111 @@
   <div id="grand-texte"> Fiche 2 : HTML et CSS</div>
   <div id="bloc-ressources">
     <strong>Ressources :</strong><br><br>
-    <a href="/ressources/fiche2/mon_site.zip"> Le site de Tom</a>
-    , un exemple de site web.<br>
-    <a href="https://www.geany.org/download/releases/">Geany</a>
-    , le logiciel utilisé pour éditer les fichiers html et css du site.
+    <a href="/ressources/fiche2/pdf_fiche.pdf">PDF de la fiche 2</a><br>
+    <a href="/ressources/fiche2/mon_site.zip"> Le site de Tom</a>, un exemple de site web.<br>
+    <a href="https://www.geany.org/download/releases/">Geany</a>, le logiciel utilisé pour éditer les fichiers html et
+    css du site.
   </div>
   <div id="contenu">
+    <h2>I- Mise en place</h2><br>
     Après avoir téléchargé le site de Tom et installé Geany, nous pouvons découvrir le site Web en lançant le fichier
     index.html sur un navigateur. Nous arrivons sur cette page :<br><br>
-    <img src="/ressources/fiche2/Image_accueil_site_de_tom.png" alt="image d'un invader" /><br><br>
+    <div class="agrandir-image">
+      <img src="/ressources/fiche2/Image_accueil_site_de_tom.png" alt="Image 1" width="500px">
+    </div><br>
+
     Nous pouvons également lancer ce fichier dans Geany pour voir le code de la page web.<br>
-    Mais ce n'est pas tout, le site de Tom possède plusieurs sous-dossiers contenants eux aussi d'autres fichiers :<br><br>
+    Mais ce n'est pas tout, le site de Tom possède plusieurs sous-dossiers contenants eux aussi d'autres fichiers
+    :<br><br>
     <li>Le dossier <span class="surligner-en-gris">images</span> contient toutes les images du site.</li><br>
-      <li>Le dossier <span
-      class="surligner-en-gris">pages</span> contient les differentes pages web du site (fichiers html).</li><br>
-      <li>Le dossier <span
-      class="surligner-en-gris">styles</span> contient un fichier .css qui regroupe tous les éléments nécessaires à la mise en forme du site
-    (couleurs, animations, placements...).</li><br>
-    
-  </div>
+    <li>Le dossier <span class="surligner-en-gris">pages</span> contient les differentes pages web du site (fichiers
+      html).</li><br>
+    <li>Le dossier <span class="surligner-en-gris">styles</span> contient un fichier .css qui regroupe tous les
+      éléments
+      nécessaires à la mise en forme du site
+      (couleurs, animations, placements...).</li><br>
+    <h2>II- Observation du code et de la page web </h2><br>
+    <details>
+      <summary>Questions de la fiche</summary><br>
+      <p>
+        <li>Question 1 :</li><br>
+        Identifier les différentes parties de la page web affichée quand vous double-cliquez sur le fichier
+        "index.HTML".<br><br>
+        <li>Question 2 :</li><br>
+        Retrouver les balises utilisées dans le code pour ces différentes parties.<br><br>
+        <li>Question 3 :</li><br>
+        Observez le code: entre la balise ouvrante &lt;html&gt; et la balise fermante &lt;/html&gt;, le code est
+        scindé
+        en 2 parties, la tête (&lt;head&gt;) et le corps (&lt;body&gt;).<br>
+        La tête: repérer la ligne aisant appel au fichier "style-de-Tom.css". À quoi sert ce fichier ?<br>
+        Le corps: identifier des balises pour insérer du texte. Préciser leur rôle. Quelle est la fonction des
+        balises
+        &lt;img.../&gt;, &lt;br/&gt; et &lt;hr/&gt;?<br><br>
+        <li>Question 4 :</li><br>
+        Dans le fichier "style-de-Tom.css", essayez de comprendre le rôlede chaque balise. Quel est le rôle des
+        informations placées dans ce document ?<br><br>
+        <li>Question 5 :</li><br>
+        Dans chacun des fichiers html, repérer les lignes qui permettent de naviguer à l'intérieur du site. Vous
+        pourrez
+        notamment rechercher la différence entre une URL relative et une URL absolue sur internet. Compéter tous les
+        fichiers afin que le site fonctionne en écrivant les liens entre les pages.<br><br>
+
+      </p>
+
+    </details>
+    <details>
+      <summary>Correction des questions</summary><br>
+      <li>Question 1 :</li><br>
+      Lorsque nous arrivons sur la page web, nous voyons plusieurs parties telles que le titre "Le top 10 de
+      Tom...", le
+      menu (en bleu), le contenu (avec le titre de la page en grand, l'image et le texte), une rubrique "à lire
+      aussi",
+      et une dernière partie qui affiche les crédits et les mentions légales du site<br><br>
+      <li>Question 2 :</li><br>
+      Titre: &lt;div id="entete-de-page"&gt;<br>
+      Menu: &lt;table id="bloc-menu" border="1"&gt;<br>
+      Contenu de la page: &lt;div id="contenu"&gt;<br>
+      Rubrique "à lire aussi": &lt;div id="infos"&gt;<br>
+      Crédits et mentions légales: &lt;div id="pied-de-page"&gt;<br><br>
+      <li>Question 3 :</li><br>
+      Le fichier "styel-de-Tom.css" permet d'ajouter des couleurs et des animations au site web. Voici à quoi
+      ressemble
+      le site de Tom sans le fichier css :<br><br>
+      <div class="agrandir-image">
+      <img src="/ressources/fiche2/site_de_tom_sans_css.png" alt="Image 1" width="300">
+    </div><br><br><br>
+      Les balises &lt;/img&gt;, &lt;br/&gt; et &lt;hr/&gt; sont des balises fermentes qui permettent de mettre fin à
+      une
+      écriture ou une image.<br><br>
+      <li>Question 4 :</li><br>
+      Les informations dans ce document permettent de faire la mise en page et l'esthétique du site web.<br><br>
+      <li>Question 5 :</li><br>
+      <a href="/ressources/fiche2/site_de_tom_complete.zip">Site de Tom complété.</a><br><br>
+    </details>
+    <h2>III- L'arbre DOM</h2><br>
+    Définition : le DOM (Document Object Model) est utilisé par les navigateurs comme premère étape pour déterminer
+    ce
+    qui doit êter rendu dans la fenêtre d'affichage et par les programmes Javascript pour modifier le contenu, la
+    structure ou le style de la page.<br><br>
+    Page HTML du site de Tom :<br><br>
+    <div class="agrandir-image">
+      <img src="/ressources/fiche2/page_html_site_de_tom.png" alt="Image 1" width="500px">
+    </div><br>
+
+    DOM de la page web (qui est assez grand):<br><br>
+    <div class="agrandir-image">
+      <img src="/ressources/fiche2/dom_index_site_de_tom.png" alt="Image 2" width="500px"><br>
 
 
-
-
-
-
+    </div>
+    <!-- Pour rendre les images cliquables pour les agrandir -->
+    <div id="modal" class="modal">
+      <span class="close">&times;</span>
+      <img id="modalImg" src="" alt="">
+    </div>
 </body>
 <script>
+
   fetch("/pages/menu.html")
     .then(response => response.text())
     .then(data => {
@@ -77,7 +155,27 @@
         });
       })();
     })
-  // .catch(err => console.error("Erreur de chargement du menu :", err));
+  const images = document.querySelectorAll('.agrandir-image img');
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = document.querySelector('.close');
+
+  // Ouvrir la modale avec l'image cliquée
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src.replace('200x150', '800x600'); // image plus grande (optionnel)
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // empêche de scroller dans le fond
+    });
+  });
+
+  // Fermer si clic sur croix ou fond noir
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target === closeBtn) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
 </script>
 
 </html>
