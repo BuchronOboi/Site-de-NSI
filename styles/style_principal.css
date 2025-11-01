@@ -202,6 +202,9 @@ body.dark-mode #bloc-ressources {
 #bloc-ressources a:visited {
 	color: #914141;
 }
+#bloc-ressources a {
+	color: #914141;
+}
 
 #grand-texte {
 	font-size: 40px;
@@ -221,4 +224,18 @@ body.dark-mode #bloc-ressources {
 
 body.dark-mode #contenu {
 	color: white;
+}
+
+
+/* Sections du site */
+details {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+summary {
+  cursor: pointer;
+  font-weight: bold;
 }
