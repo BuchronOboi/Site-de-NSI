@@ -3,7 +3,7 @@
 body {
 	padding: 10px;
 	background-color: #fffeea;
-	font-family: Arial, sans-serif;
+	font-family: Helvetica, sans-serif;
 	font-size: 16px;
 	transition: 0.3s, color 0.3s;
 	align-items: center;
@@ -105,7 +105,10 @@ img {
 span.surligner-en-gris {
 	padding: 2px;
 	border-radius: 5px;
-	background: #ababab8e;
+	background: #d1d1d1;
+	font-family: consolas;
+	color: black;
+	font-weight: bold;
 }
 
 #entete-de-page {
@@ -212,6 +215,7 @@ nav a {
 	padding: 10px 0px;
 
 }
+
 nav a:visited {
 	color: black;
 }
@@ -311,6 +315,7 @@ a {
 	color: black;
 	font-size: 16px;
 	padding-left: 20px;
+	line-height: 1.5em;
 }
 
 #contenu li {
@@ -339,4 +344,33 @@ body.dark-mode details {
 summary {
 	cursor: pointer;
 	font-weight: bold;
+}
+
+#rubrique-attention {
+	margin-top: 10px;
+	padding: 4px;
+	padding-left: 10px;
+	max-width: 900px;
+	border: 3px solid black;
+	border-radius: 20px;
+	color: rgb(0, 0, 0);
+	background: #ff5d5de9;
+
+}
+
+table {
+	margin: 10px;
+	text-align: center;
+	border: 3px solid black;
+	border-collapse: collapse;
+}
+body.dark-mode table {
+	border: 3px solid white;
+	background: #243238;
+}
+h2 {
+	line-height: 2;
+}
+h3{
+	line-height: 2;
 }

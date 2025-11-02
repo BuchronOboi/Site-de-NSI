@@ -2,14 +2,14 @@
 <html lang="fr" data-theme="clair">
 
 <head>
-  <title> NSI - Clément LEVAL </title>
+  <title> NSI - Clément </title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="../../../styles/style_principal.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/style_principal.css" type="text/css" />
 </head>
 
 <body>
   <div id="entete-de-page">
-    NSI - Clément LEVAL
+    NSI - Clément
   </div><br>
   <div id="menu-placeholder"></div>
 
@@ -18,28 +18,177 @@
   <div id="bloc-ressources">
     <strong>Ressources :</strong><br><br>
     <a href="https://www.geany.org/download/releases/">Geany</a>
-    , le logiciel utilisé pour éditer les fichiers html et css du site.
+    , le logiciel utilisé pour éditer les fichiers html et css du site.<br>
+    <a href="https://www.geany.org/download/releases/">Visual Studio Code</a>
+    , une alternative à Geany que j'ai utilisée pour coder le site.
   </div>
+  </div>
+
   <div id="contenu">
-    Après avoir téléchargé le site de Tom et installé Geany, nous pouvons découvrir le site Web en lançant le fichier
-    index.html sur un navigateur. Nous arrivons sur cette page :<br><br>
-    <img src="/ressources/fiche2/Image_accueil_site_de_tom.png" alt="image d'un invader" /><br><br>
-    Nous pouvons également lancer ce fichier dans Geany pour voir le code de la page web.<br>
-    Mais ce n'est pas tout, le site de Tom possède plusieurs sous-dossiers contenants eux aussi d'autres fichiers :<br><br>
-    <li>Le dossier <span class="surligner-en-gris">images</span> contient toutes les images du site.</li><br>
-      <li>Le dossier <span
-      class="surligner-en-gris">pages</span> contient les differentes pages web du site (fichiers html).</li><br>
-      <li>Le dossier <span
-      class="surligner-en-gris">styles</span> contient un fichier .css qui regroupe tous les éléments nécessaires à la mise en forme du site
-    (couleurs, animations, placements...).</li><br>
-    
+    <h2>Tout d'abord - Le langage de programmation</h2>
+    Définition : un langage de programmation est un langage compréhensible par la machine qui l'exécute. Il existe
+    plusieurs langages de programmations tels que le C, le C++, le java, le php etc... En NSI nous utilisons Python
+    comme langage de programmation car il est simple et utilisé dans l'enseignement supérieur.<br>
+    Pour manier python, il existe de nombreux logiciels (comment Geany ou VSCode mentionnés ci-dessus), mais il existe
+    des alternatives en ligne comme BASTHON ou CAPYTALE.
+
+    <details open>
+      <summary>Les variables </summary>
+      <p>
+      <h2>I- Les variables</h2>
+      Définition : une variable est une voite dans laquelle on stocke une information. Il existe plusieurs types de
+      variables en fonction de la valeur qu'on rentre (<span class="surligner-en-gris">int</span> pour un nombre entier,
+      <span class="surligner-en-gris">float</span> pour un nombre à virgule, <span class="surligner-en-gris">bool</span>
+      pour un nombre binaire, <span class="surligner-en-gris">str</span> pour une chaine de caractères...). Python
+      reconnaît le type de variable lors de l'affectation - on parle alors de typage dynamique.<br>
+
+      <!--    Pour nommer une variable, -->
+
+
+
+      <h3>1- Les nombres</h3>
+      Les nombres entiers tels que <span class="surligner-en-gris">1</span>, <span class="surligner-en-gris">0</span>,
+      <span class="surligner-en-gris">-8</span> ou <span class="surligner-en-gris">96</span> sont des nombres entiers
+      sans
+      virgule. Ils sont stockés dans des variables de type <span class="surligner-en-gris">int</span> (pour interer qui
+      signifie entier en anglais).<br>
+
+      Les nombres à virgule comme <span class="surligner-en-gris">5.0</span>, <span
+        class="surligner-en-gris">-2.4</span>,
+      <span class="surligner-en-gris">5e6</span> ou <span class="surligner-en-gris">5E3</span> sont de type <span
+        class="surligner-en-gris">float</span>.
+
+      <div id="rubrique-attention">
+        Attention ! En python, les nombres à virgule s'écrivent avec un point <span class="surligner-en-gris">.</span>
+        et
+        non avec une virgule <span class="surligner-en-gris">,</span><br>
+        Le nombre <span class="surligner-en-gris">5</span> est de type <span class="surligner-en-gris">int</span> mais
+        le
+        nombre <span class="surligner-en-gris">5.0</span> est de type <span class="surligner-en-gris">float</span>.
+      </div>
+
+      <h3>2- Les chaînes de caractères</h3>
+      Une chaîne de caractères est une suite de caractères. En python, elle se nomme str (pour string qui signifie
+      "chaîne
+      de caractères" en anglais).<br>
+      Une chaîne de caractères est idenfitiable par ses guillemets simples <span class="surligner-en-gris">'...'</span>
+      ou
+      des guillemets doubles <span class="surligner-en-gris">"..."</span>.
+      <div id="rubrique-attention">
+        Il ne fait pas confondre 3 qui est de type int, avec "3" qui est une chaîne de caractères.<br>
+        Si une chaîne de caractères contient déjà des guillemets, on l'entoure d'apostrophes. Exemple : <span
+          class="surligner-en-gris">'Une robe "vraiment" !'</span><br>
+        La chaîne " " n'est pas vide : elle contient un espace, qui est considéré comme un caractère.
+      </div>
+
+      <h2>II- Les opérations possibles avec des variables</h2>
+
+      <h3>1- Les opérations avec des nombres (int ou float)</h3>
+      Soit 2 variables <span class="surligner-en-gris">a</span> et <span class="surligner-en-gris">b</span> :
+      <table border="1">
+        <tr>
+          <th>Opérations</th>
+          <th>Code</th>
+        </tr>
+        <tr>
+          <td>Addition</td>
+          <td><span class="surligner-en-gris">a + b</span></td>
+        </tr>
+        <tr>
+          <td>Soustraction</td>
+          <td><span class="surligner-en-gris">a - b</span></td>
+        </tr>
+        <tr>
+          <td>Multiplication</td>
+          <td><span class="surligner-en-gris">a*b</span></td>
+        </tr>
+        <tr>
+          <td>Division</td>
+          <td><span class="surligner-en-gris">a/b</span></td>
+        </tr>
+        <tr>
+          <td>a puissance b</td>
+          <td><span class="surligner-en-gris">a**b</span></td>
+        </tr>
+        <tr>
+          <td>Quotient entrier de a par b</td>
+          <td><span class="surligner-en-gris">a//b</span></td>
+        </tr>
+        <tr>
+          <td>Reste de la division de a par b</td>
+          <td><span class="surligner-en-gris">a%b</span></td>
+        </tr>
+      </table>
+      Grâce au module math, nous pouvons réaliser des opérations plus complexes sur les nombres et les variables :<br>
+      <table border="1">
+        <tr>
+          <th>Opérations</th>
+          <th>Code</th>
+        </tr>
+        <tr>
+          <td>Valeur absolue de a</td>
+          <td><span class="surligner-en-gris">abs(a)</span></td>
+        </tr>
+        <tr>
+          <td>Le nombre a avec b décimales</td>
+          <td><span class="surligner-en-gris">round(a, b)</span></td>
+        </tr>
+        <tr>
+          <td>Entier juste avant a</td>
+          <td><span class="surligner-en-gris">floor(a)</span></td>
+        </tr>
+        <tr>
+          <td>Racine carrée de a</td>
+          <td><span class="surligner-en-gris">sqrt(a)</span></td>
+        </tr>
+      </table>
+
+
+      <h3>2- Les opérations avec des chaînes de caractères (str)</h3>
+      Soit 2 chaînes de caractères <span class="surligner-en-gris">c</span> et <span
+        class="surligner-en-gris">b</span>:<br>
+      <table widht:500px border="1">
+        <tr>
+          <th style="width: 400px;">Opération</th>
+          <th style="width: 100px;">Code</th>
+        </tr>
+        <tr>
+          <td>Renvoyer la longueur de la chaîne c</td>
+          <td><span class="surligner-en-gris">len(c)</span></td>
+        </tr>
+        <tr>
+          <td>Renvoyer le caractère du rang i de la chaîne de caractère c</td>
+          <td><span class="surligner-en-gris">ch[i]</span></td>
+        </tr>
+        <tr>
+          <td>Renvoyer la partie de la chaîne de caractère e,ter l'indice i et l'indice j exclu</td>
+          <td><span class="surligner-en-gris">ch[i :j]</span></td>
+        </tr>
+        <tr>
+          <td>Colle les chaînes de caractères c et d</td>
+          <td><span class="surligner-en-gris">c+d</span></td>
+        </tr>
+        <tr>
+          <td>recopie n fois la chaîne c</td>
+          <td><span class="surligner-en-gris">c*n</span></td>
+        </tr>
+        <tr>
+          <td>Teste si le caractère x est dans la chapine c</td>
+          <td><span class="surligner-en-gris">x in c</span></td>
+        </tr>
+      </table>
+      </p>
+
+    </details>
+
+
+
+
+
+
+
+
   </div>
-
-
-
-
-
-
 </body>
 <script>
   fetch("/pages/menu.html")
