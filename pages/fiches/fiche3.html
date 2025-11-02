@@ -181,7 +181,54 @@
 
     </details>
 
+    <details open>
+      <summary>Les instrucitons conditionnelles</summary>
+      En programmation et dans la vie de tous les jours, il est crucial de faire des comparaisons. Exemple : si il fait
+      beau, alors je sors dehors. Les conditions en Python fonctionnent exactement pareil.<br>
+      Pour faire une comparaison, on peut utiliser <span class="surligner-en-gris">if</span>, <span
+        class="surligner-en-gris">elif</span> (ou <span class="surligner-en-gris">else if</span>) et <span
+        class="surligner-en-gris">else</span>. Le code se présente comme ça :<br><br>
 
+      <div id="bloc-de-code">
+        1 if (condition_vraie):<br>
+        2 &nbsp;&nbsp;&nbsp;&nbsp;instructions_a_realiser<br>
+        3 elif (condition_vraie):<br>
+        4 &nbsp;&nbsp;&nbsp;&nbsp;instructions_a_realiser<br>
+        5 else:<br>
+        6 &nbsp;&nbsp;&nbsp;&nbsp;instructions_a_realiser</span>
+      </div>
+
+      <li><span class="surligner-en-gris">if</span> revient à dire en français "si la condition ci-dessous est vraie"
+      </li>
+      <li>les <span class="surligner-en-gris">:</span> signifient "alors"</li>
+      <li><span class="surligner-en-gris">elif</span> revient à dire "sinon si la condition ci-dessous est vraie"</li>
+      <li>quand <span class="surligner-en-gris">else</span> est présent, il est placé forcément à la fin des conditions;
+        c'est les instructions qu'on exécute quand aucune des conditions n'est validée.</li>
+    </details>
+    <details open>
+      <summary>Les boucles</summary>
+      Les boucles permettent de répéter plusieurs fois des instructions et permettent de remlpacer le copier/coller. En
+      Python, il existe deux grand types de boucles. La boucle <span class="surligner-en-gris">for</span> et la boucle
+      <span class="surligner-en-gris">while</span>.
+      <h3>1- La boucle for</h3>
+      La boucle <span class="surligner-en-gris">for</span> est utilisée quand on sait combien de fois celle-ci doit
+      s'exécuter. Elle se code comme ça :
+      <div id="bloc-de-code">
+        1 for i in range(5):<span id="commentaire"> // i est la variable du compteur qui augmente de jusqu'à 5
+          exclu.</span><br>
+        2 &nbsp;&nbsp;&nbsp;&nbsp;instructions<br>
+      </div>
+
+      <h3>2- La boucle while</h3>
+      La boucle <span class="surligner-en-gris">while</span> est utilisée quand on ne sait pas combien de fois elle doit
+      s'exécuter.
+      <div id="bloc-de-code">
+        1 i = 10:<span id="commentaire"> // il faut initialiser la variable de la boucle.</span><br>
+        2 while i &lt; 10:<span id="commentaire"> // la boucle while est exécutée tant que i est inférieur à
+          10</span><br>
+        3 &nbsp;&nbsp;&nbsp;&nbsp;instructions<br>
+      </div>
+    </details>
 
 
 

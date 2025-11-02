@@ -333,9 +333,13 @@ details {
 	padding: 10px;
 	border: 2px solid #000000;
 	border-radius: 15px;
-	background: #f9f9f9;
-}
+	background: linear-gradient(120deg, #fafafa, #cecece)
+	/* background: linear-gradient(-45deg, #c6c6c6, #e4ffb6, #23a5d59a, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+ */
 
+}
 body.dark-mode details {
 	border: 2px solid white;
 	background: #243238;
@@ -364,13 +368,38 @@ table {
 	border: 3px solid black;
 	border-collapse: collapse;
 }
+
 body.dark-mode table {
 	border: 3px solid white;
 	background: #243238;
 }
+
 h2 {
 	line-height: 2;
 }
-h3{
+
+h3 {
 	line-height: 2;
+}
+
+#bloc-de-code {
+	margin: 10px;
+	padding: 10px;
+	background-color: #243238;
+	border: 3px solid black;
+	border-radius: 15px;
+	font-weight: bold;
+	font-family: 'Courier New', Courier, monospace;
+	color: rgb(249, 191, 83);
+	max-width: 1000px;
+}
+body.dark-mode #bloc-de-code {
+	background-color: #1a1a1f;
+	border: 3px solid white;
+}
+
+#commentaire {
+	font-weight: normal;
+	font-family: 'Courier New', Courier, monospace;
+	color: #ccc;
 }
