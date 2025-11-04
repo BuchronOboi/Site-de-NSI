@@ -359,7 +359,11 @@ summary {
 	border-radius: 20px;
 	color: rgb(0, 0, 0);
 	background: #ff5d5de9;
-
+}
+body.dark-mode #rubrique-attention {
+	background: rgb(97, 0, 0);
+	color: rgb(225, 225, 225);
+	border: 3px solid white;
 }
 
 table {
