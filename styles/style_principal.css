@@ -32,13 +32,13 @@ body.accueil::after {
 
 /* Image du mode clair */
 body.accueil::before {
-	background-image: url("/images/fond_accueil.png");
+	background-image: url("/images/fond_accueil.jpg");
 	opacity: 1;
 }
 
 /* Image du mode sombre */
 body.accueil::after {
-	background-image: url("/images/fond_accueil_sombre.png");
+	background-image: url("/images/fond_accueil_sombre.jpg");
 	opacity: 0;
 }
 
