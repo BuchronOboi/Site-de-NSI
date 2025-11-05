@@ -25,15 +25,26 @@
   </div>
 
   <div id="contenu">
-    <h2>Tout d'abord - Le langage de programmation</h2>
-    Définition : un langage de programmation est un langage compréhensible par la machine qui l'exécute. Il existe
-    plusieurs langages de programmations tels que le C, le C++, le java, le php etc... En NSI nous utilisons Python
-    comme langage de programmation car il est simple et utilisé dans l'enseignement supérieur.<br>
-    Pour manier python, il existe de nombreux logiciels (comment Geany ou VSCode mentionnés ci-dessus), mais il existe
-    des alternatives en ligne comme BASTHON ou CAPYTALE.
 
+    <!-- Fiche 3.1 -->
     <details open>
-      <summary>Les variables </summary>
+      <summary>Fiche 3.1 - Consignes et premiers pas</summary>
+      <h2>Le langage de programmation</h2>
+      Définition : un langage de programmation est un langage compréhensible par la machine qui l'exécute. Il existe
+      plusieurs langages de programmations tels que le C, le C++, le java, le php etc... En NSI nous utilisons Python
+      comme langage de programmation car il est simple et utilisé dans l'enseignement supérieur.<br>
+      Pour manier python, il existe de nombreux logiciels (comment Geany ou VSCode mentionnés ci-dessus), mais il existe
+      des alternatives en ligne comme BASTHON ou CAPYTALE.<br>
+        <h2>Vocabulaire</h2>
+        <li>Script Python : texte d'un programme Python</li>
+        <li>Interpréteur Python : application qui interprète le langade Pytho, et le traduit dans un langage compréhensible par la machine (langage machine). Il peut être enrichi par de très nombreux modules notamment scientifiques. Ces modules sont des bibliothèques apportant des fonctionnalités déjà programmées, ce qui permet d'alléger le développement.</li>
+        <li>Console Python ou Shell : vous permet d'interragir avec l'interpréteur Python ou d'exécuter des scripts Python. Les trois chevrons "&gt;&gt;&gt;" indiquent que l'interpréteur est prêt à recevoir des instructions.</li>
+        <li>IDE : logiciel de création d'applications, qui rassemble des outils de dévelommement fréquemment utilisés dans une interface utilisateur graphique (GUI). L'IDE utilisé au lycée est Pyzo.</li>
+        <li>Éditeur de texte : logiciel destiné à l'édition des fichiers textes. Par fichier texte, il faut comprendre l'ensemble des fichiers écrits, soit pour donner des informations à l'utilisateur, soit avec un ensemble d'instructions à fournir au système d'exploitation. Au lycée nous utilisons Geany.</li>
+    </details>
+    <!-- Fiche 3.2 -->
+    <details>
+      <summary>Fiche 3.2 - Les variables</summary>
       <p>
       <h2>I- Les variables</h2>
       Définition : une variable est une voite dans laquelle on stocke une information. Il existe plusieurs types de
@@ -41,10 +52,6 @@
       <span class="surligner-en-gris">float</span> pour un nombre à virgule, <span class="surligner-en-gris">bool</span>
       pour un nombre binaire, <span class="surligner-en-gris">str</span> pour une chaine de caractères...). Python
       reconnaît le type de variable lors de l'affectation - on parle alors de typage dynamique.<br>
-
-      <!--    Pour nommer une variable, -->
-
-
 
       <h3>1- Les nombres</h3>
       Les nombres entiers tels que <span class="surligner-en-gris">1</span>, <span class="surligner-en-gris">0</span>,
@@ -81,7 +88,14 @@
         La chaîne " " n'est pas vide : elle contient un espace, qui est considéré comme un caractère.
       </div>
 
-      <h2>II- Les opérations possibles avec des variables</h2>
+      <h2>II- Les noms que l'on ne peut pas donner aux variables</h2>
+      Les variables ne peuvent :
+      <li>pas contenir d'espace dans leur nom. Pour imiter l'espace on met le caractère <span class="surligner-en-gris">_</span></li>
+      <li>pas comporter d'accents ou de caractères spéciaux.</li>
+      <li>pas contenir dans leur nom des commandes qui sont utilisées par python (exemple: <span class="surligner-en-gris">print</span>, <span class="surligner-en-gris">input</span>, <span class="surligner-en-gris">for</span> etc...)</li>
+      <li>pas commencer par une majuscule ni par un <span class="surligner-en-gris">_</span></li>
+
+      <h2>III- Les opérations possibles avec des variables</h2>
 
       <h3>1- Les opérations avec des nombres (int ou float)</h3>
       Soit 2 variables <span class="surligner-en-gris">a</span> et <span class="surligner-en-gris">b</span> :
@@ -180,61 +194,159 @@
       </p>
 
     </details>
+    <!-- Fiche 3.3 -->
+    <details>
+      <summary>Fiche 3.3 - Conditions et boucles</summary>
+      <details open>
+        <summary>Les instrucitons conditionnelles</summary>
+        En programmation et dans la vie de tous les jours, il est crucial de faire des comparaisons. Exemple : si il
+        fait
+        beau, alors je sors dehors. Les conditions en Python fonctionnent exactement pareil.<br>
+        Pour faire une comparaison, on peut utiliser <span class="surligner-en-gris">if</span>, <span
+          class="surligner-en-gris">elif</span> (ou <span class="surligner-en-gris">else if</span>) et <span
+          class="surligner-en-gris">else</span>. Le code se présente comme ça :<br><br>
 
-    <details open>
-      <summary>Les instrucitons conditionnelles</summary>
-      En programmation et dans la vie de tous les jours, il est crucial de faire des comparaisons. Exemple : si il fait
-      beau, alors je sors dehors. Les conditions en Python fonctionnent exactement pareil.<br>
-      Pour faire une comparaison, on peut utiliser <span class="surligner-en-gris">if</span>, <span
-        class="surligner-en-gris">elif</span> (ou <span class="surligner-en-gris">else if</span>) et <span
-        class="surligner-en-gris">else</span>. Le code se présente comme ça :<br><br>
+        <div id="bloc-de-code">
+          1 if (condition_vraie):<br>
+          2 &nbsp;&nbsp;&nbsp;&nbsp;instructions_a_realiser<br>
+          3 elif (condition_vraie):<br>
+          4 &nbsp;&nbsp;&nbsp;&nbsp;instructions_a_realiser<br>
+          5 else:<br>
+          6 &nbsp;&nbsp;&nbsp;&nbsp;instructions_a_realiser</span>
+        </div>
 
-      <div id="bloc-de-code">
-        1 if (condition_vraie):<br>
-        2 &nbsp;&nbsp;&nbsp;&nbsp;instructions_a_realiser<br>
-        3 elif (condition_vraie):<br>
-        4 &nbsp;&nbsp;&nbsp;&nbsp;instructions_a_realiser<br>
-        5 else:<br>
-        6 &nbsp;&nbsp;&nbsp;&nbsp;instructions_a_realiser</span>
-      </div>
+        <li><span class="surligner-en-gris">if</span> revient à dire en français "si la condition ci-dessous est vraie"
+        </li>
+        <li>les <span class="surligner-en-gris">:</span> signifient "alors"</li>
+        <li><span class="surligner-en-gris">elif</span> revient à dire "sinon si la condition ci-dessous est vraie"</li>
+        <li>quand <span class="surligner-en-gris">else</span> est présent, il est placé forcément à la fin des
+          conditions;
+          c'est les instructions qu'on exécute quand aucune des conditions n'est validée.</li>
+      </details>
+      <details open>
+        <summary>Les boucles</summary>
+        Les boucles permettent de répéter plusieurs fois des instructions et permettent de remlpacer le copier/coller.
+        En
+        Python, il existe deux grand types de boucles. La boucle <span class="surligner-en-gris">for</span> et la boucle
+        <span class="surligner-en-gris">while</span>.
+        <h3>1- La boucle for</h3>
+        La boucle <span class="surligner-en-gris">for</span> est utilisée quand on sait combien de fois celle-ci doit
+        s'exécuter. Elle se code comme ça :
+        <div id="bloc-de-code">
+          1 for i in range(5):<span id="commentaire"> // i est la variable du compteur qui augmente de jusqu'à 5
+            exclu.</span><br>
+          2 &nbsp;&nbsp;&nbsp;&nbsp;instructions<br>
+        </div>
 
-      <li><span class="surligner-en-gris">if</span> revient à dire en français "si la condition ci-dessous est vraie"
-      </li>
-      <li>les <span class="surligner-en-gris">:</span> signifient "alors"</li>
-      <li><span class="surligner-en-gris">elif</span> revient à dire "sinon si la condition ci-dessous est vraie"</li>
-      <li>quand <span class="surligner-en-gris">else</span> est présent, il est placé forcément à la fin des conditions;
-        c'est les instructions qu'on exécute quand aucune des conditions n'est validée.</li>
+        <h3>2- La boucle while</h3>
+        La boucle <span class="surligner-en-gris">while</span> est utilisée quand on ne sait pas combien de fois elle
+        doit
+        s'exécuter.
+        <div id="bloc-de-code">
+          1 i = 10:<span id="commentaire"> // il faut initialiser la variable de la boucle.</span><br>
+          2 while i &lt; 10:<span id="commentaire"> // la boucle while est exécutée tant que i est inférieur à
+            10</span><br>
+          3 &nbsp;&nbsp;&nbsp;&nbsp;instructions<br>
+        </div>
+      </details>
     </details>
-    <details open>
-      <summary>Les boucles</summary>
-      Les boucles permettent de répéter plusieurs fois des instructions et permettent de remlpacer le copier/coller. En
-      Python, il existe deux grand types de boucles. La boucle <span class="surligner-en-gris">for</span> et la boucle
-      <span class="surligner-en-gris">while</span>.
-      <h3>1- La boucle for</h3>
-      La boucle <span class="surligner-en-gris">for</span> est utilisée quand on sait combien de fois celle-ci doit
-      s'exécuter. Elle se code comme ça :
-      <div id="bloc-de-code">
-        1 for i in range(5):<span id="commentaire"> // i est la variable du compteur qui augmente de jusqu'à 5
-          exclu.</span><br>
-        2 &nbsp;&nbsp;&nbsp;&nbsp;instructions<br>
-      </div>
+    <!--    Fiche 3.4 -->
+    <details>
+      <summary>Fiche 3.4 - Fonctions et instructions</summary>
+      <details open>
+        <summary>Les fonctions de base</summary>
+        En Python, il existe des fonctions déjà toute faites qui permettent de faire des choses utiles.<br>
+        <li>La fonction <span class="surligner-en-gris">print</span> permet d'afficher du texte dans le terminal. Très
+          utile pour comprendre les erreurs
+          dans son programme.</li>
+        <div id="bloc-de-code">&gt;&gt;&gt; print("Bonjour bonsoir")<br>
+          &gt;&gt;&gt; Bonjour bonsoir<br><br>
 
-      <h3>2- La boucle while</h3>
-      La boucle <span class="surligner-en-gris">while</span> est utilisée quand on ne sait pas combien de fois elle doit
-      s'exécuter.
-      <div id="bloc-de-code">
-        1 i = 10:<span id="commentaire"> // il faut initialiser la variable de la boucle.</span><br>
-        2 while i &lt; 10:<span id="commentaire"> // la boucle while est exécutée tant que i est inférieur à
-          10</span><br>
-        3 &nbsp;&nbsp;&nbsp;&nbsp;instructions<br>
-      </div>
+          &gt;&gt;&gt; a = 3<br>
+          &gt;&gt;&gt; print(a)<br>
+          &gt;&gt;&gt; 3</div>
+        <li>La fonction <span class="surligner-en-gris">input</span> permet à l'utilisateur de saisir une chaîne de
+          caractères au clavier.</li>
+
+        <div id="bloc-de-code">&gt;&gt;&gt; nombre = input("Entrez un nombre")<br>
+          5<br>
+          &gt;&gt;&gt; print(nombre)<br>
+          &gt;&gt;&gt; 5<span id="commentaire"> // Attention le résultat du input est interprété comme une chaîne de
+            caractère !</span></div>
+      </details>
+      <details open>
+        <summary>Les modules</summary>
+        Les modules permettent d'ajouter des fonctions à Python. Il en existe un très grand nombre qui permettent de
+        faire
+        des choses très variées. Voici quelques modules principaux :
+        <li>Le module math permet d'implémanter de nombreuses opérations mathématique à Python (les racines carrées avec
+          <span class="surligner-en-gris">sqrt()</span>, la valeur absolue avec <span
+            class="surligner-en-gris">abs()</span>, <span class="surligner-en-gris">sin()</span>, <span
+            class="surligner-en-gris">cos()</span>, <span class="surligner-en-gris">tan()</span> pour la trigonométrie
+          et
+          bien d'autres).
+        </li>
+        <li>Le module random qui renvoie un entier aléatoire situé entre a et b avec l'instruction <span
+            class="surligner-en-gris">randint(a, b)</span>.</li>
+        <li>Le module turtle qui permet de tracer des formes avec des couleurs.</li>
+        <li>Et bien d'autres...</li><br>
+        Pour importer un module, il faut mettre une de ces trois inscructions tout en haut du code Python :
+        <div id="bloc-de-code">from math import*<span id="commentaire"> // Importe toutes les fonctions dans le module
+            math</span><br><br>
+          import math<span id="commentaire"> // Importe aussi toutes le fonctions dans le module math</span><br><br>
+          from math import sqrt, sin<span id="commentaire"> // Importe seulement les fonctions du module qui sont
+            marquées
+            après le import (ici la fonction sqrt et la fonction sin)</span><br>
+        </div>
+      </details>
+      <details open>
+        <summary>Créer et utiliser les fonctions</summary>
+        <h2>I- Créer une fonction</h2>
+        Les fonctions permettent de réutiliser du code pour éviter les répétitions et ainsi mieux organiser le
+        programme.
+        Une fonction est définie, puis elle peut être appelée à tout moment dans le programme. Un fontion se définit
+        comme
+        ceci :
+        <div id="bloc-de-code">1 def nom_de_la_fonction(arguments):<span id="commentaire"> // les arguments doivent être
+            placés dans les parenthèses, mais ne sont pas obligatoires. Attention à ne pas oublier les :</span><br>
+          2&nbsp;&nbsp;&nbsp;&nbsp;instructions exécutées par la fonction<br>
+          3&nbsp;&nbsp;&nbsp;&nbsp;return variable_a_retourner<span id="commentaire"> // Un return permet de renvoyer
+            une
+            variable à l'issue de la fonction.</span>
+        </div>
+        <h2>II- Utiliser une fonction</h2>
+        Comment appeler une fonction ?
+        <div id="bloc-de-code">1 def bonsoir():<span id="commentaire"> // Définition d'une fonction qui ne prend pas
+            d'arguments. On met quand même les parenthèses</span><br>
+          2&nbsp;&nbsp;&nbsp;&nbsp;return "Bonsoir les filles."<br>
+          3<br>
+          4 print(bonsoir())<span id="commentaire"> // On veut afficher la fonction : il faut marquer le nom de la
+            fonction (bonsoir) avec les parenthèses</span><br><br>
+
+          &gt;&gt;&gt; Bonsoir les filles. <span id="commentaire"> // Voilà le résultat</span>
+        </div>
+        <h2>III- Les fonctions lambda</h2>
+        Les fonctions lambda, qu'est-ce que c'est ?<br>
+        Elles permettent de définir une fonction simple en une seule ligne. Exemple :
+        <div id="bloc-de-code">(lambda a, b : a*b)(2, 3)</div>
+        <li><span class="surligner-en-gris">a</span> et <span class="surligner-en-gris">b</span> sont des paramètres de
+          la fonction</li>
+        <li>ce qui est après les <span class="surligner-en-gris">:</span> correspond à la valeur de retour de la
+          fonction </li>
+        <li><span class="surligner-en-gris">(2, 3)</span> correspond aux valeurs respectives de <span
+            class="surligner-en-gris">a</span> et de <span class="surligner-en-gris">b</span>.</li>
+        <h2>IV- Documenter une fonction</h2>
+        Pour documenter une fonction, on place trois guillemets avant et après un court texte qui décrit la fonction.
+        <div id="bloc-de-code">1 def nombre_plus_un(nombre_de_depart):<br>
+          2&nbsp;&nbsp;&nbsp;&nbsp;<span id="commentaire">"""Cette fonction ajoute 1 au nombre rentré"""</span><br>
+          3&nbsp;&nbsp;&nbsp;&nbsp;return nombre_de_depart + 1<br>
+          4<br>
+          5 help(nombre_plus_un())<span id="commentaire"> // on marque help avec le nom de la fonction entre
+            parenthèses.</span><br><br>
+          &gt;&gt;&gt; Cette fonction ajoute 1 au nombre rentré
+        </div>
+      </details>
     </details>
-
-
-
-
-
-
   </div>
 </body>
 <script>
