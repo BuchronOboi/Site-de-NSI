@@ -35,19 +35,27 @@
       comme langage de programmation car il est simple et utilisé dans l'enseignement supérieur.<br>
       Pour manier python, il existe de nombreux logiciels (comment Geany ou VSCode mentionnés ci-dessus), mais il existe
       des alternatives en ligne comme BASTHON ou CAPYTALE.<br>
-        <h2>Vocabulaire</h2>
-        <li>Script Python : texte d'un programme Python</li>
-        <li>Interpréteur Python : application qui interprète le langade Pytho, et le traduit dans un langage compréhensible par la machine (langage machine). Il peut être enrichi par de très nombreux modules notamment scientifiques. Ces modules sont des bibliothèques apportant des fonctionnalités déjà programmées, ce qui permet d'alléger le développement.</li>
-        <li>Console Python ou Shell : vous permet d'interragir avec l'interpréteur Python ou d'exécuter des scripts Python. Les trois chevrons "&gt;&gt;&gt;" indiquent que l'interpréteur est prêt à recevoir des instructions.</li>
-        <li>IDE : logiciel de création d'applications, qui rassemble des outils de dévelommement fréquemment utilisés dans une interface utilisateur graphique (GUI). L'IDE utilisé au lycée est Pyzo.</li>
-        <li>Éditeur de texte : logiciel destiné à l'édition des fichiers textes. Par fichier texte, il faut comprendre l'ensemble des fichiers écrits, soit pour donner des informations à l'utilisateur, soit avec un ensemble d'instructions à fournir au système d'exploitation. Au lycée nous utilisons Geany.</li>
+      <h2>Vocabulaire</h2>
+      <li>Script Python : texte d'un programme Python</li>
+      <li>Interpréteur Python : application qui interprète le langade Python, et le traduit dans un langage
+        compréhensible par la machine (langage machine). Il peut être enrichi par de très nombreux modules notamment
+        scientifiques. Ces modules sont des bibliothèques apportant des fonctionnalités déjà programmées, ce qui permet
+        d'alléger le développement.</li>
+      <li>Console Python ou Shell : vous permet d'interragir avec l'interpréteur Python ou d'exécuter des scripts
+        Python. Les trois chevrons "&gt;&gt;&gt;" indiquent que l'interpréteur est prêt à recevoir des instructions.
+      </li>
+      <li>IDE : logiciel de création d'applications, qui rassemble des outils de dévelommement fréquemment utilisés dans
+        une interface utilisateur graphique (GUI). L'IDE utilisé au lycée est Pyzo.</li>
+      <li>Éditeur de texte : logiciel destiné à l'édition des fichiers textes. Par fichier texte, il faut comprendre
+        l'ensemble des fichiers écrits, soit pour donner des informations à l'utilisateur, soit avec un ensemble
+        d'instructions à fournir au système d'exploitation. Au lycée nous utilisons Geany.</li>
     </details>
     <!-- Fiche 3.2 -->
     <details>
       <summary>Fiche 3.2 - Les variables</summary>
       <p>
       <h2>I- Les variables</h2>
-      Définition : une variable est une voite dans laquelle on stocke une information. Il existe plusieurs types de
+      Définition : une variable est une boite dans laquelle on stocke une information. Il existe plusieurs types de
       variables en fonction de la valeur qu'on rentre (<span class="surligner-en-gris">int</span> pour un nombre entier,
       <span class="surligner-en-gris">float</span> pour un nombre à virgule, <span class="surligner-en-gris">bool</span>
       pour un nombre binaire, <span class="surligner-en-gris">str</span> pour une chaine de caractères...). Python
@@ -57,7 +65,8 @@
       Les nombres entiers tels que <span class="surligner-en-gris">1</span>, <span class="surligner-en-gris">0</span>,
       <span class="surligner-en-gris">-8</span> ou <span class="surligner-en-gris">96</span> sont des nombres entiers
       sans
-      virgule. Ils sont stockés dans des variables de type <span class="surligner-en-gris">int</span> (pour interer qui
+      virgule. Ils sont donc stockés dans des variables de type <span class="surligner-en-gris">int</span> (pour integer
+      qui
       signifie entier en anglais).<br>
 
       Les nombres à virgule comme <span class="surligner-en-gris">5.0</span>, <span
@@ -82,7 +91,7 @@
       ou
       des guillemets doubles <span class="surligner-en-gris">"..."</span>.
       <div id="rubrique-attention">
-        Il ne fait pas confondre 3 qui est de type int, avec "3" qui est une chaîne de caractères.<br>
+        Il ne faut pas confondre 3 qui est de type int, avec "3" qui est une chaîne de caractères.<br>
         Si une chaîne de caractères contient déjà des guillemets, on l'entoure d'apostrophes. Exemple : <span
           class="surligner-en-gris">'Une robe "vraiment" !'</span><br>
         La chaîne " " n'est pas vide : elle contient un espace, qui est considéré comme un caractère.
@@ -90,9 +99,12 @@
 
       <h2>II- Les noms que l'on ne peut pas donner aux variables</h2>
       Les variables ne peuvent :
-      <li>pas contenir d'espace dans leur nom. Pour imiter l'espace on met le caractère <span class="surligner-en-gris">_</span></li>
+      <li>pas contenir d'espace dans leur nom. Pour imiter l'espace on met le caractère <span
+          class="surligner-en-gris">_</span>.</li>
       <li>pas comporter d'accents ou de caractères spéciaux.</li>
-      <li>pas contenir dans leur nom des commandes qui sont utilisées par python (exemple: <span class="surligner-en-gris">print</span>, <span class="surligner-en-gris">input</span>, <span class="surligner-en-gris">for</span> etc...)</li>
+      <li>pas contenir dans leur nom des commandes qui sont utilisées par python (exemple: <span
+          class="surligner-en-gris">print</span>, <span class="surligner-en-gris">input</span>, <span
+          class="surligner-en-gris">for</span> etc...)</li>
       <li>pas commencer par une majuscule ni par un <span class="surligner-en-gris">_</span></li>
 
       <h2>III- Les opérations possibles avec des variables</h2>
@@ -125,7 +137,7 @@
           <td><span class="surligner-en-gris">a**b</span></td>
         </tr>
         <tr>
-          <td>Quotient entrier de a par b</td>
+          <td>Quotient entier de a par b</td>
           <td><span class="surligner-en-gris">a//b</span></td>
         </tr>
         <tr>
@@ -133,7 +145,8 @@
           <td><span class="surligner-en-gris">a%b</span></td>
         </tr>
       </table>
-      Grâce au module math, nous pouvons réaliser des opérations plus complexes sur les nombres et les variables :<br>
+      Grâce au module math (que nous voyons dans la fiche 3.4), nous pouvons réaliser des opérations plus complexes sur
+      les nombres et les variables :<br>
       <table border="1">
         <tr>
           <th style="width: 300px;"> Opérations</th>
@@ -187,7 +200,7 @@
           <td><span class="surligner-en-gris">c*n</span></td>
         </tr>
         <tr>
-          <td>Teste si le caractère x est dans la chapine c</td>
+          <td>Teste si le caractère x est dans la chaîne c</td>
           <td><span class="surligner-en-gris">x in c</span></td>
         </tr>
       </table>
@@ -204,7 +217,7 @@
         beau, alors je sors dehors. Les conditions en Python fonctionnent exactement pareil.<br>
         Pour faire une comparaison, on peut utiliser <span class="surligner-en-gris">if</span>, <span
           class="surligner-en-gris">elif</span> (ou <span class="surligner-en-gris">else if</span>) et <span
-          class="surligner-en-gris">else</span>. Le code se présente comme ça :<br><br>
+          class="surligner-en-gris">else</span>. Le code se présente comme ça :
 
         <div id="bloc-de-code">
           1 if (condition_vraie):<br>
@@ -215,10 +228,10 @@
           6 &nbsp;&nbsp;&nbsp;&nbsp;instructions_a_realiser</span>
         </div>
 
-        <li><span class="surligner-en-gris">if</span> revient à dire en français "si la condition ci-dessous est vraie"
+        <li><span class="surligner-en-gris">if</span> revient à dire en français "si la condition est vraie"
         </li>
         <li>les <span class="surligner-en-gris">:</span> signifient "alors"</li>
-        <li><span class="surligner-en-gris">elif</span> revient à dire "sinon si la condition ci-dessous est vraie"</li>
+        <li><span class="surligner-en-gris">elif</span> revient à dire "sinon si la condition est vraie"</li>
         <li>quand <span class="surligner-en-gris">else</span> est présent, il est placé forcément à la fin des
           conditions;
           c'est les instructions qu'on exécute quand aucune des conditions n'est validée.</li>
@@ -244,9 +257,14 @@
         s'exécuter.
         <div id="bloc-de-code">
           1 i = 10:<span id="commentaire"> // il faut initialiser la variable de la boucle.</span><br>
-          2 while i &lt; 10:<span id="commentaire"> // la boucle while est exécutée tant que i est inférieur à
-            10</span><br>
+          2 while i &lt; 16:<span id="commentaire"> // la boucle while est exécutée tant que i est inférieur à
+            16</span><br>
           3 &nbsp;&nbsp;&nbsp;&nbsp;instructions<br>
+        </div>
+        <div id="rubrique-attention">
+          Quand on code une boucle while, il faut faire attention à ne pas créer une boucle infinie comme dans l'exemple
+          ci-dessus. Il faudrait rajouter dans la boucle quelque chose comme <span class="surligner-en-gris">i = i
+            +1</span>
         </div>
       </details>
     </details>
@@ -276,10 +294,11 @@
       </details>
       <details open>
         <summary>Les modules</summary>
-        Les modules permettent d'ajouter des fonctions à Python. Il en existe un très grand nombre qui permettent de
+        Les modules permettent d'ajouter des fonctions à Python. Il en existe un grand nombre qui permet de
         faire
-        des choses très variées. Voici quelques modules principaux :
-        <li>Le module math permet d'implémanter de nombreuses opérations mathématique à Python (les racines carrées avec
+        des choses variées. Voici quelques modules principaux :
+        <li>Le module math permet d'implémanter de nombreuses opérations mathématiques à Python (les racines carrées
+          avec
           <span class="surligner-en-gris">sqrt()</span>, la valeur absolue avec <span
             class="surligner-en-gris">abs()</span>, <span class="surligner-en-gris">sin()</span>, <span
             class="surligner-en-gris">cos()</span>, <span class="surligner-en-gris">tan()</span> pour la trigonométrie
@@ -304,7 +323,7 @@
         <h2>I- Créer une fonction</h2>
         Les fonctions permettent de réutiliser du code pour éviter les répétitions et ainsi mieux organiser le
         programme.
-        Une fonction est définie, puis elle peut être appelée à tout moment dans le programme. Un fontion se définit
+        Une fonction est définie, puis elle peut être appelée à tout moment dans le programme. Une fontion se définit
         comme
         ceci :
         <div id="bloc-de-code">1 def nom_de_la_fonction(arguments):<span id="commentaire"> // les arguments doivent être
@@ -342,7 +361,7 @@
           3&nbsp;&nbsp;&nbsp;&nbsp;return nombre_de_depart + 1<br>
           4<br>
           5 help(nombre_plus_un())<span id="commentaire"> // on marque help avec le nom de la fonction entre
-            parenthèses.</span><br><br>
+            parenthèses pour obtenir de l'aide.</span><br><br>
           &gt;&gt;&gt; Cette fonction ajoute 1 au nombre rentré
         </div>
       </details>
@@ -354,28 +373,14 @@
     .then(response => response.text())
     .then(data => {
       document.getElementById("menu-placeholder").innerHTML = data;
-
-      // -- init du mode sombre (exécuté immédiatement après l'injection) --
       (function initTheme() {
         const body = document.body;
-
-        // appliquer la préférence sauvegardée
         if (localStorage.getItem('theme') === 'dark') {
           body.classList.add('dark-mode');
         }
-
-        // trouver tous les boutons/éléments qui doivent toggler le thème
         const toggles = document.querySelectorAll('.theme-toggle');
-
-        // sécuritiy check si aucun toggle trouvé
-        /* if (!toggles || toggles.length === 0) {
-          // console.log('Aucun .theme-toggle trouvé'); // décommenter pour debug
-          return;
-        } */
-
         toggles.forEach(btn => {
           btn.addEventListener('click', (e) => {
-            e.preventDefault(); // au cas où c'est un <a>
             body.classList.toggle('dark-mode');
             const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
@@ -383,7 +388,6 @@
         });
       })();
     })
-  // .catch(err => console.error("Erreur de chargement du menu :", err));
 </script>
 
 </html>

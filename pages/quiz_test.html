@@ -13,14 +13,9 @@
   </div><br>
   <div id="menu-placeholder"></div>
 
-
-
-
   <div id="grand-texte">📝 Quiz / tests</div><br>
   <h1>Cette page est encore vide, mais elle sera bientôt opérationelle !</h1>
   </div> <br />
-
-
 
 </body>
 <script>
@@ -28,28 +23,14 @@
     .then(response => response.text())
     .then(data => {
       document.getElementById("menu-placeholder").innerHTML = data;
-
-      // -- init du mode sombre (exécuté immédiatement après l'injection) --
       (function initTheme() {
         const body = document.body;
-
-        // appliquer la préférence sauvegardée
         if (localStorage.getItem('theme') === 'dark') {
           body.classList.add('dark-mode');
         }
-
-        // trouver tous les boutons/éléments qui doivent toggler le thème
         const toggles = document.querySelectorAll('.theme-toggle');
-
-        // sécuritiy check si aucun toggle trouvé
-        /* if (!toggles || toggles.length === 0) {
-          // console.log('Aucun .theme-toggle trouvé'); // décommenter pour debug
-          return;
-        } */
-
         toggles.forEach(btn => {
           btn.addEventListener('click', (e) => {
-            e.preventDefault(); // au cas où c'est un <a>
             body.classList.toggle('dark-mode');
             const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
@@ -57,7 +38,6 @@
         });
       })();
     })
-  // .catch(err => console.error("Erreur de chargement du menu :", err));
 </script>
 
 </html>

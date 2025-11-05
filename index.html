@@ -1,15 +1,14 @@
 ﻿<!DOCTYPE html>
-<html lang="fr" data-theme="clair">
+<html lang="fr" >
 
 <head>
   <title> NSI - Clément LEVAL </title>
   <meta charset="utf-8" />
-<!--   <base href="https://site-de-nsi-leval-clement.netlify.app/">
- -->  <link rel="stylesheet" href="/styles/style_principal.css" type="text/css" />
-   
+  <base href="https://site-de-nsi-leval-clement.netlify.app/"><!-- Cette commande donne la racine du site pour toutes les url -->
+  <link rel="stylesheet" href="/styles/style_principal.css" type="text/css" />
 </head>
 
-<body>
+<body class="accueil">
   <div id="entete-de-page">
     NSI - Clément LEVAL
   </div><br>
@@ -26,12 +25,15 @@
   <li>L'histoire de l’informatique</li>
   <li>Représentations des données : types et valeurs de base</li>
   <li>Représentation des données : types construits</li>
-  <li>raitement de données en table</li>
-  <li>nteractions entre l’homme et la machine sur le web</li>
+  <li>Traitement de données en table</li>
+  <li>Interactions entre l’homme et la machine sur le web</li>
   <li>Architectures matérielles et systèmes d’exploitation</li>
   <li>Langages et programmation</li>
   <li>Algorithmique</li>
-  </div>
+  </div><br>
+  <h1>Raccourcis<br>
+  <a href="/pages/cours_de_nsi.html">Tous les cours de NSI</a>
+  </h1>
 
   
 </body>
@@ -39,13 +41,12 @@
   fetch("/pages/menu.html")
     .then(response => response.text())
     .then(data => {
-      document.getElementById("menu-placeholder").innerHTML = data;
+      document.getElementById("menu-placeholder").innerHTML = data;/* Chargement du menu */
 
-      // -- init du mode sombre (exécuté immédiatement après l'injection) --
       (function initTheme() {
         const body = document.body;
 
-        // appliquer la préférence sauvegardée
+        // le script regarde si le mode sombre est activé dans le localstorage du navigateur
         if (localStorage.getItem('theme') === 'dark') {
           body.classList.add('dark-mode');
         }
@@ -55,7 +56,6 @@
 
         toggles.forEach(btn => {
           btn.addEventListener('click', (e) => {
-          /*   e.preventDefault(); // au cas où c'est un <a> */
             body.classList.toggle('dark-mode');
             const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
@@ -64,6 +64,4 @@
       })();
     })
 </script>
-
-
 </html>

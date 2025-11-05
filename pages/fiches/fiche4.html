@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title> NSI - Clément </title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/styles/style_principal.css" type="text/css" />
+</head>
+
+<body>
+    <div id="entete-de-page">
+        NSI - Clément
+    </div><br>
+    <div id="menu-placeholder"></div>
+
+    <div id="grand-texte"> Fiche 4 : Les booléns</div>
+    <div id="bloc-ressources"><strong>Ressources :</strong><br><br>
+        <a href="/ressources/fiche4/pdf_fiche_4.pdf">PDF de la fiche 4</a><br>
+        <a href="https://www.youtube.com/watch?v=rcrdd7eKBAc">Une vidéo qui présente les booléens</a>
+        </strong>
+    </div>
+    <div id="contenu">
+        <h2>Introduction</h2>
+        Dans les fiches précédentes, nous avons parlé des différents types de variables. Il existe les str, les int les
+        float, mais il existe aussi un 4ème type de variable : les booléens.<br>
+        Ce sont des variables qui ne peuvent prendre que <span class="surligner-en-gris">True</span> ou <span
+            class="surligner-en-gris">False</span> comme valeur (soit oui/non en français, ou <span
+            class="surligner-en-gris">0</span> ou <span class="surligner-en-gris">1</span>
+        en binaire).<br>
+        Les booléens ont été inventés par George BOOLE en 1847. Il créa aussi l'algèbre de Boole.
+        <details open>
+            <summary>I- Booléens et comparaisons</summary>
+            En Python, les résultats des comparaisons peuvent être des booléens. Pour comparer, nous utilisons ces
+            opérateurs :
+            <li><span class="surligner-en-gris">&lt;</span> (plus petit que)</li>
+            <li><span class="surligner-en-gris">&lt;=</span> (inférieur ou égal)</li>
+            <li><span class="surligner-en-gris">&gt;</span> (plus grand que)</li>
+            <li><span class="surligner-en-gris">&gt;=</span> (supérieur ou égal)</li>
+            <li><span class="surligner-en-gris">==</span> (égal)</li>
+            <li><span class="surligner-en-gris">!=</span> (différent)</li>
+            <div id="bloc-de-code">
+                1 a = 16<br>
+                2 print(a>4)<br>
+                3 True<span id="commentaire"> // a est superieur a 4 donc True est renvoyé</span><br>
+                4<br>
+                5 print(a==6)<br>
+                6 False<span id="commentaire"> // a n'est pas égal à 6 donc False est renvoyé</span>
+            </div>
+        </details>
+        <details open>
+            <summary>II- Opérateurs booléens</summary>
+            Il existe 4 types d'opérateurs pour booléens.
+            <li>L'opérateur <span class="surligner-en-gris">not</span>, il inverse le booléen (0 devient 1 et 1 devient
+                0)</li>
+            <li>L'opérateur <span class="surligner-en-gris">and</span>, il ne renvoie 1 que si les deux booléens valent
+                1</li>
+            <li>L'opérateur <span class="surligner-en-gris">or</span>, il renvoie 1 si au moins un des deux booléens
+                vaut 1</li>
+            <li>L'opérateur <span class="surligner-en-gris">xor</span> qui renvoie 1 seulement si un seul des deux
+                booléns vaut 1</li><br>
+            Exemple :
+            <table border="1">
+                <tr>
+                    <th style="width: 50px;">a</th>
+                    <th style="width: 50px;">b</th>
+                    <th style="width: 140px;">a avec not</th>
+                    <th style="width: 140px;">a et b avec and</th>
+                    <th style="width: 140px;">a et b avec or</th>
+                    <th style="width: 140px;">a et b avec xor</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+            </table>
+        </details>
+        <details open>
+            <summary>III- Les circuits logiques binaires</summary>
+            <h2>III- Les circuits logiques binaires</h2>
+            Les processeurs d'ordinateurs sont constitués de milliards de transistors agissant comme des portes
+            logiques.
+            Ils peuvent laisser passer un signal (1) ou non (0). La combinaison des ces portes logiques permet à nos
+            ordinateurs d'effectuer des calculs. Voici les 4 portes logiques schématisées :<br><br>
+            <div class="agrandir-image">
+                <img src="/ressources/fiche4/image_bilan_4_portes_logiques.png" alt="Image bilan des portes logiques"
+                    width="500px">
+            </div><br>
+            On peut assembler ces portes pour créer des composants de base d'un ordinateur. Voici un exemple d'une
+            combinaison de portes logiques :<br><br>
+            <div class="agrandir-image">
+                <img src="/ressources/fiche4/exemple_combinaison-portes.png"
+                    alt="Exemple de la combinaison des portes logiques" width="500px">
+            </div>
+        </details>
+    </div>
+    <!-- Pour rendre les images cliquables pour les agrandir -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modalImg" src="" alt="">
+    </div>
+</body>
+<script>
+    fetch("/pages/menu.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("menu-placeholder").innerHTML = data;
+            (function initTheme() {
+                const body = document.body;
+                if (localStorage.getItem('theme') === 'dark') {
+                    body.classList.add('dark-mode');
+                }
+                const toggles = document.querySelectorAll('.theme-toggle');
+                toggles.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        body.classList.toggle('dark-mode');
+                        const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+                        localStorage.setItem('theme', theme);
+                    });
+                });
+            })();
+        })
+
+    /*Gestion des images de la page*/
+    const images = document.querySelectorAll('.agrandir-image img');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.querySelector('.close');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            modalImg.src = img.src.replace('200x150', '800x600');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // empêche de scroller dans le fond
+        });
+    });
+
+    // Fermer si on clique sur la croix ou le fond noir
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target === closeBtn) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+</script>
+
+</html>
