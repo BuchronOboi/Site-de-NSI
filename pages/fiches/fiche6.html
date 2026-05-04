@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="clair">
+
+<head>
+  <title> NSI - Clément LEVAL </title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/styles/style_principal.css" type="text/css" />
+</head>
+
+<body>
+  <div id="entete-de-page">
+    NSI - Clément LEVAL
+  </div><br>
+  <div id="menu-placeholder"></div>
+
+
+  <div id="grand-texte"> Fiche 6 - Encodage d'un texte</div>
+  <div id="bloc-ressources"><strong>Ressources :</strong><br>
+    <a href="/ressources/fiche6/Fiche6.pdf">PDF de la fiche 6</a>
+  </div>
+  <div id="contenu">
+    <h2>I - Le code ASCII</h2>
+    En 1960, le code ASCII (American Standard Code for Information Interchange) est apparu. Il permet de convertir le
+    texte en binaire afin que l'ordinateur le comprenne.<br>
+    La norme ASCII de base utilise 7 bits et elle contient 128 caractères.<br>
+    Voici la table ASCII sur 7 bits :<br><br>
+    <div class="agrandir-image">
+      <img src="/ressources/fiche6/table_ascii.png" alt="Table ASCII" width="500px">
+    </div><br>
+    <li><strong>De 0 à 31 :</strong> caractères de contrôle. Ils permettent à l'ordinateur de faire des actions.</li>
+    <li><strong>De 48 à 57 :</strong> chiffres</li>
+    <li><strong>De 65 à 90 :</strong> mes lettres majuscules</li>
+    <li><strong>De 97 à 122 :</strong> les lettres minuscules</li><br>
+
+    Les numéros allant de 0 à 128, ils représentent tous un nombre binaire codé sur 7 bits.<br>
+    Par exemple, la lettre <span class="surligner-en-gris">C</span> est associée au numéro <span
+      class="surligner-en-gris">67</span>. En binaire <span class="surligner-en-gris">67</span> s'écrit <span
+      class="surligner-en-gris">01000011</span><br>
+
+    <h2>II - Les normes qui ont suivi la table ASCII</h2>
+    <li>La table ASCII sur 7 bits possède seulement 128 caractères, ce qui est trop peu pour afficher les caractères
+      accentués. Dans un premier temps, la norme ISO-8859-1 a été crée et elle permet d'affichre les accents.</li>
+    <li>Puis la norme <a href="https://fr.wikipedia.org/wiki/Unicode"><strong>unicode</strong></a> est arrivée : elle
+      permet l'affichage de tous les caractères ce qui permet d'afficher les symboles du Moyen-Orient etc.</li>
+
+    <h2>III - Compléments à la <a href="/pages/fiches/fiche3.html">fiche 3</a></h2>
+    <table border="1">
+      <tr>
+        <th style="width: 50px;">Commande</th>
+        <th style="width: 500px;">Effet</th>
+      </tr>
+      <tr>
+        <td>mot.upper()</td>
+        <td>Met la chaîne de caractères en majuscules</td>
+
+      </tr>
+      <tr>
+        <td>mot.lower()</td>
+        <td>Met la chaîne de caractères en minuscules</td>
+
+      </tr>
+      <tr>
+        <td>str(nb)</td>
+        <td>Renvoie une chaîne de caractères qui contient l'écriture décimale de nomnbre nb</td>
+
+      </tr>
+      <tr>
+        <td>int(ch)</td>
+        <td>Transforme la chaîne de caractères en valeur numérique entière</td>
+
+      </tr>
+      <tr>
+        <td>float(ch)</td>
+        <td>Transforme la chaîne de caractères en valeur numérique flottante</td>
+
+      </tr>
+    </table>
+    <h2>IV - Exercices</h2>
+    Des exercices sont présents dans le <a href="/ressources/fiche6/Fiche6.pdf">PDF de la fiche</a>
+
+
+
+
+
+
+  </div>
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img id="modalImg" src="" alt="">
+  </div>
+</body>
+<script>
+
+  fetch("/pages/menu.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("menu-placeholder").innerHTML = data;
+      (function initTheme() {
+        const body = document.body;
+        if (localStorage.getItem('theme') === 'dark') {
+          body.classList.add('dark-mode');
+        }
+        const toggles = document.querySelectorAll('.theme-toggle');
+        toggles.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            body.classList.toggle('dark-mode');
+            const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+          });
+        });
+      })();
+    })
+  /*Gestion des images de la page*/
+  const images = document.querySelectorAll('.agrandir-image img');
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = document.querySelector('.close');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src.replace('200x150', '800x600');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // empêche de scroller dans le fond
+    });
+  });
+
+  // Fermer si on clique sur la croix ou le fond noir
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target === closeBtn) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+
+</html>

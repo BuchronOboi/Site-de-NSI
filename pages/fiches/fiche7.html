@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="clair">
+
+<head>
+    <title> NSI - Clément LEVAL </title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/styles/style_principal.css" type="text/css" />
+</head>
+
+<body>
+    <div id="entete-de-page">
+        NSI - Clément LEVAL
+    </div><br>
+    <div id="menu-placeholder"></div>
+
+
+    <div id="grand-texte"> Fiche 7 - Les types de données construits</div>
+    <div id="bloc-ressources"><strong>Ressources :</strong><br>
+        <a href="/ressources/fiche7/Fiche7_1.pdf">PDF de la fiche 7.1</a><br>
+        <a href="/ressources/fiche7/Fiche7_2.pdf">PDF de la fiche 7.2</a><br>
+        <a href="/ressources/fiche7/Fiche7_3.pdf">PDF de la fiche 7.3</a>
+    </div>
+    <div id="contenu">
+
+        <details open>
+            <summary>Fiche 7.1 - Les dictionnaires</summary>
+            <h2>Définition</h2>
+            Un dictionnaire est une collection d'objets non-ordonnée. Il est composé d'éléments, composés eux-même d'une
+            clé et d'une valeur.<br>
+            Les dictionnaires peuvent être modifiés selons nos besoins. On dit qu'ils sont muables.<br>
+            Les clés d'un dictionnaire ne peuvent pas être modifiées, et doivent être uniques.
+            Pour créer un dictionnaire, on utilise les accolades : <span class="surligner-en-gris">dico={}</span>
+            <h2>Opérations sur les dictionnaires</h2>
+            <table border="1">
+                <tr>
+                    <th style="width: 250px;">Commande</th>
+                    <th style="width: 500px;">Effet</th>
+                    <th style="width: 300px;">Exemple</th>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">dico = {}</span></td>
+                    <td>Crée un dictionnaire vide appelé 'dico'</td>
+                </tr>
+                <tr>
+                    <td>La méthode <span class="surligner-en-gris">keys()</span></td>
+                    <td>Renvoie la séquence des clés utilisées dans un dictionnaire</td>
+                    <td>print(dico.keys())</td>
+                </tr>
+                <tr>
+                    <td>La méthode <span class="surligner-en-gris">values()</span></td>
+                    <td>renvoie la séquence des valeurs du dictionnaire</td>
+                    <td>print(dico.values())</td>
+                </tr>
+                <tr>
+                    <td>La méthode <span class="surligner-en-gris">items()</span></td>
+                    <td>Extrait une séquence équivalente de tuples du dictionnaire</td>
+                    <td>print(dico.items())</td>
+                </tr>
+                <tr>
+                    <td>La méthode <span class="surligner-en-gris">get()</span></td>
+                    <td>Permet de récupérer une valeur connaissant sa clé</td>
+                    <td>print(dico.get("cleChoisie"))</td>
+                </tr>
+                <tr>
+                    <td>Test d'appartenance avec <span class="surligner-en-gris">in</span></td>
+                    <td>Permet de savoirsi un dictionnaire comprend une clé bien déterminée</td>
+                    <td>if "cleChoisie" in dico:<br>
+                        print(dico[cleChoisie"])</td>
+                </tr>
+                <tr>
+                    <td>La méthode <span class="surligner-en-gris">copy()</span></td>
+                    <td>Permet de copier un dictionnaire </td>
+                    <td>dico1 = dico.copy()</td>
+                </tr>
+                <tr>
+                    <td>La fonction <span class="surligner-en-gris">del</span></td>
+                    <td>Permet de supprimmer une clé et sa valeur</td>
+                    <td>del dico["cleChoisie"]</td>
+                </tr>
+            </table>
+            <h2>Exercices</h2>
+            Les exercices sont disponibles dans le <a href="/ressources/fiche6/Fiche7_1.pdf">PDF de la fiche 7.1</a>
+        </details>
+        <details open>
+            <summary>Fiche 7.2 - Les tableaux</summary>
+            <h2>Définition</h2>
+            Un tableau, aussi appelé liste permet de stocker plusieurs données dans une seule variable.<br>
+            Un tableau n'a pas de taille fixe, il est muable. Nous pouvons ajouter, modifier ou supprimmer des clés.
+            Chaque élément du tableau est repéré par un indice qui commence à zéro comme pour les chaînes de
+            caractères<br>
+            <h2>Opérations sur les tableaux</h2>
+            <table border="1">
+                <tr>
+                    <th style="width: 250px;">Commande</th>
+                    <th style="width: 500px;">Effet</th>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">L=[88, "fraises"]</span></td>
+                    <td>Crée un tableau nommé L qui contient deux éléments : 88 et "fraises".</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">L=[]</span></td>
+                    <td>Crée un tableau vide</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">L[i]</span></td>
+                    <td>Renvoie l'élément d'indice i de la liste L</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">L[-1]</span></td>
+                    <td>Renvoie le dernier élément de la liste L</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">L[i]=elem</span></td>
+                    <td>Affecte la valeur contenue dans elem dans à l'indice i de la liste L</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">len(L)</span></td>
+                    <td>Renvoie le nombre d'éléments de la liste L</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">e in L</span></td>
+                    <td>Teste si e est dans L</td>
+                </tr>
+            </table>
+            <table border="1">
+                <tr>
+                    <th style="width: 250px;">Fonction</th>
+                    <th style="width: 500px;">Effet</th>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">L.append(element)</span></td>
+                    <td>ajoute le contenue de la variable element à la fin de la liste</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">L.pop(i)</span></td>
+                    <td>Supprimme l'élément d'indice i de la liste L</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">L.pop()</span></td>
+                    <td>Supprimme le dernier élément de la liste L</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">[1,2]+[3,4]</span></td>
+                    <td>le + concatène les 2 listes pour former la liste [1,2,3,4]</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">[1,2]*3]</span></td>
+                    <td>le * dupplique pour former [1,2,1,2,1,2]</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">L.sort()</span> ou <span
+                            class="surligner-en-gris">sorted(L)</span></td>
+                    <td>Trie la liste L</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">choice(L)</span></td>
+                    <td>Choisi un élément au hasard de la liste L (avec le module Random)</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">L[ :m]</span></td>
+                    <td>Affiche les m premiers éléments de la liste L</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">L[m :n]</span></td>
+                    <td>Affiche les éléments de l'indice m à l'indice n-1</td>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">L1 = L.deepcopy()</span> (avec le module Copy)</td>
+                    <td>Copie proprement la liste L dans la liste L1</td>
+                </tr>
+            </table>
+            <h2>Les différentes constructions de tableaux</h2>
+            Il existe deux manières de construire des tableaux :
+            <li>Avec la fonction range : <br>
+                <div id="bloc-de-code">1 L=list(range(4))</div>
+            </li>
+            <li>Par compréhension :<br>
+                <div id="bloc-de-code">1 liste = range(10)<br>
+                    2 liste_carres=[x**2 for x in L]<span id="commentaire"> // Le tableau possède les carrés des nombres
+                        présents dans la liste L</span></div>
+            </li>
+            <h2>Les matrices</h2>
+            Les matrices sont des tableaux tableaux de même longueur.<br>
+            <div id="bloc-de-code">1 matrice=[[1,2,3,4],[5,6,7,8],[9,10,11,12]]<br>
+                <span id="commentaire">2 // ici la matrice contient 4 tableaux qui possèdent chacuns 4 valeurs</span>
+            </div>
+            Voici le programme de base pour parcourir une matrice
+            <div id="bloc-de-code">1 n = len(matrice)<br>
+                2 m = len(matrice[0])<br>
+                3 for i in range(n):<br>
+                4 &nbsp;&nbsp;&nbsp;&nbsp;for j in range(m):<br>
+                5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(matrice[i][j])</div>
+            <h2>Exercices</h2>
+            Les exercices sont disponibles dans le <a href="/ressources/fiche6/Fiche7_2.pdf">PDF de la fiche 7.2</a>
+        </details>
+        <details open>
+            <summary>Fiche 7.3 - Les tuples</summary>
+            <h2>Définition</h2>
+            Un tuple est une collection d'objets ordonnée. Ses différents éléments sont séparés par une virgule.<br>
+            Un tuple peut être affecté à une variable et une fonction peut retourner un tuple<br>
+            Voici un exemple d'initialisation de tuple :
+            <div id="bloc-de-code">monTuple = ("bonjour", "au revoir", 67)<br>
+            <div id="commentaire">// Un tuple est défini avec des parenthèses. Ici il contient 3 éléments. Ces éléments peuvent être de types différents (str, int etc.).</div>
+
+            </div>
+            Pour créer un dictionnaire, on utilise les accolades : <span class="surligner-en-gris">dico={}</span>
+            <h2>Opérations sur les dictionnaires</h2>
+            <table border="1">
+                <tr>
+                    <th style="width: 250px;">Commande</th>
+                    <th style="width: 500px;">Effet</th>
+                    <th style="width: 300px;">Exemple</th>
+                </tr>
+                <tr>
+                    <td><span class="surligner-en-gris">dico = {}</span></td>
+                    <td>Crée un dictionnaire vide appelé 'dico'</td>
+                </tr>
+                <tr>
+                    <td>La méthode <span class="surligner-en-gris">keys()</span></td>
+                    <td>Renvoie la séquence des clés utilisées dans un dictionnaire</td>
+                    <td>print(dico.keys())</td>
+                </tr>
+                <tr>
+                    <td>La méthode <span class="surligner-en-gris">values()</span></td>
+                    <td>renvoie la séquence des valeurs du dictionnaire</td>
+                    <td>print(dico.values())</td>
+                </tr>
+                <tr>
+                    <td>La méthode <span class="surligner-en-gris">items()</span></td>
+                    <td>Extrait une séquence équivalente de tuples du dictionnaire</td>
+                    <td>print(dico.items())</td>
+                </tr>
+                <tr>
+                    <td>La méthode <span class="surligner-en-gris">get()</span></td>
+                    <td>Permet de récupérer une valeur connaissant sa clé</td>
+                    <td>print(dico.get("cleChoisie"))</td>
+                </tr>
+                <tr>
+                    <td>Test d'appartenance avec <span class="surligner-en-gris">in</span></td>
+                    <td>Permet de savoirsi un dictionnaire comprend une clé bien déterminée</td>
+                    <td>if "cleChoisie" in dico:<br>
+                        print(dico[cleChoisie"])</td>
+                </tr>
+                <tr>
+                    <td>La méthode <span class="surligner-en-gris">copy()</span></td>
+                    <td>Permet de copier un dictionnaire </td>
+                    <td>dico1 = dico.copy()</td>
+                </tr>
+                <tr>
+                    <td>La fonction <span class="surligner-en-gris">del</span></td>
+                    <td>Permet de supprimmer une clé et sa valeur</td>
+                    <td>del dico["cleChoisie"]</td>
+                </tr>
+            </table>
+            <h2>Exercices</h2>
+            Les exercices sont disponibles dans le <a href="/ressources/fiche6/Fiche7_1.pdf">PDF de la fiche 7.1</a>
+        </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modalImg" src="" alt="">
+    </div>
+</body>
+<script>
+
+    fetch("/pages/menu.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("menu-placeholder").innerHTML = data;
+            (function initTheme() {
+                const body = document.body;
+                if (localStorage.getItem('theme') === 'dark') {
+                    body.classList.add('dark-mode');
+                }
+                const toggles = document.querySelectorAll('.theme-toggle');
+                toggles.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        body.classList.toggle('dark-mode');
+                        const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+                        localStorage.setItem('theme', theme);
+                    });
+                });
+            })();
+        })
+    /*Gestion des images de la page*/
+    const images = document.querySelectorAll('.agrandir-image img');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.querySelector('.close');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            modalImg.src = img.src.replace('200x150', '800x600');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // empêche de scroller dans le fond
+        });
+    });
+
+    // Fermer si on clique sur la croix ou le fond noir
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target === closeBtn) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+</script>
+
+</html>
