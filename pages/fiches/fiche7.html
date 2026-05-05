@@ -198,63 +198,22 @@
             <summary>Fiche 7.3 - Les tuples</summary>
             <h2>Définition</h2>
             Un tuple est une collection d'objets ordonnée. Ses différents éléments sont séparés par une virgule.<br>
-            Un tuple peut être affecté à une variable et une fonction peut retourner un tuple<br>
+            Un tuple peut être affecté à une variable et une fonction peut retourner un tuple.<br>
+            Un tuple est immuable, et on ne peut ajouter des éléments qu'au début ou à la fin d'un tuple (pas entre deux éléments).
             Voici un exemple d'initialisation de tuple :
             <div id="bloc-de-code">monTuple = ("bonjour", "au revoir", 67)<br>
-            <div id="commentaire">// Un tuple est défini avec des parenthèses. Ici il contient 3 éléments. Ces éléments peuvent être de types différents (str, int etc.).</div>
-
+                <div id="commentaire">// Un tuple est défini avec des parenthèses. Ici il contient 3 éléments. Ces
+                    éléments peuvent être de types différents (str, int etc.).</div>
             </div>
-            Pour créer un dictionnaire, on utilise les accolades : <span class="surligner-en-gris">dico={}</span>
-            <h2>Opérations sur les dictionnaires</h2>
-            <table border="1">
-                <tr>
-                    <th style="width: 250px;">Commande</th>
-                    <th style="width: 500px;">Effet</th>
-                    <th style="width: 300px;">Exemple</th>
-                </tr>
-                <tr>
-                    <td><span class="surligner-en-gris">dico = {}</span></td>
-                    <td>Crée un dictionnaire vide appelé 'dico'</td>
-                </tr>
-                <tr>
-                    <td>La méthode <span class="surligner-en-gris">keys()</span></td>
-                    <td>Renvoie la séquence des clés utilisées dans un dictionnaire</td>
-                    <td>print(dico.keys())</td>
-                </tr>
-                <tr>
-                    <td>La méthode <span class="surligner-en-gris">values()</span></td>
-                    <td>renvoie la séquence des valeurs du dictionnaire</td>
-                    <td>print(dico.values())</td>
-                </tr>
-                <tr>
-                    <td>La méthode <span class="surligner-en-gris">items()</span></td>
-                    <td>Extrait une séquence équivalente de tuples du dictionnaire</td>
-                    <td>print(dico.items())</td>
-                </tr>
-                <tr>
-                    <td>La méthode <span class="surligner-en-gris">get()</span></td>
-                    <td>Permet de récupérer une valeur connaissant sa clé</td>
-                    <td>print(dico.get("cleChoisie"))</td>
-                </tr>
-                <tr>
-                    <td>Test d'appartenance avec <span class="surligner-en-gris">in</span></td>
-                    <td>Permet de savoirsi un dictionnaire comprend une clé bien déterminée</td>
-                    <td>if "cleChoisie" in dico:<br>
-                        print(dico[cleChoisie"])</td>
-                </tr>
-                <tr>
-                    <td>La méthode <span class="surligner-en-gris">copy()</span></td>
-                    <td>Permet de copier un dictionnaire </td>
-                    <td>dico1 = dico.copy()</td>
-                </tr>
-                <tr>
-                    <td>La fonction <span class="surligner-en-gris">del</span></td>
-                    <td>Permet de supprimmer une clé et sa valeur</td>
-                    <td>del dico["cleChoisie"]</td>
-                </tr>
-            </table>
+            <h2>Utilisation des tuples</h2>
+            Un tuple peut être utilisé pour échanger deux variables :
+            <div id="bloc-de-code">1 a = 8<br>
+                2 b = 5<br>
+                3 a, b = b, a
+                <div id="commentaire"> // Désormais, a = 5 et b = 8.</div>
+            </div>
             <h2>Exercices</h2>
-            Les exercices sont disponibles dans le <a href="/ressources/fiche6/Fiche7_1.pdf">PDF de la fiche 7.1</a>
+            Les exercices sont disponibles dans le <a href="/ressources/fiche6/Fiche7_3.pdf">PDF de la fiche 7.3a>
         </details>
 
 
@@ -298,27 +257,6 @@
                 });
             })();
         })
-    /*Gestion des images de la page*/
-    const images = document.querySelectorAll('.agrandir-image img');
-    const modal = document.getElementById('modal');
-    const modalImg = document.getElementById('modalImg');
-    const closeBtn = document.querySelector('.close');
-
-    images.forEach(img => {
-        img.addEventListener('click', () => {
-            modalImg.src = img.src.replace('200x150', '800x600');
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // empêche de scroller dans le fond
-        });
-    });
-
-    // Fermer si on clique sur la croix ou le fond noir
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal || e.target === closeBtn) {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
 </script>
 
 </html>
