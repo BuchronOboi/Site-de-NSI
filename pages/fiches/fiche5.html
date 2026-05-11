@@ -14,87 +14,112 @@
   <div id="menu-placeholder"></div>
 
 
-  <div id="grand-texte"> Fiche 5 -  Représentation des nombres</div>
+  <div id="grand-texte"> Fiche 5 - Représentation des nombres</div>
   <div id="bloc-ressources"><strong>Ressources :</strong><br>
-    <a href="/ressources/fiche5/pdf_fiche_5.pddf">PDF de la fiche 5</a>
+    <a href="/ressources/fiche5/fiche5-1pdf.pdf">PDF de la fiche 5.1</a><br>
+    <a href="/ressources/fiche5/fiche5-2pdf.pdf">PDF de la fiche 5.2</a><br>
+    <a href="/ressources/fiche5/fiche5-3pdf.pdf">PDF de la fiche 5.3</a><br>
   </div>
   <div id="contenu">
     <details open>
       <summary>Fiche 5.1 - Les entiers naturels</summary>
-        <h2>Introduction</h2>
-        Dans un ordinateur, les données sont sotckées et transmises à l'aides de transistors qui ne peuvent prendre que deux états : le 0 et le 1.<br>
-        L'unité de mesure en informatique est donc le binaire (0, 1) contrairement au décimal dans la vie de tous les jours. Pour faire des opérations, les ordinateurs regroupent les nombre binaires par groupes de 8. C'est l'octet.<br>
-        De nos jours, la grande majorité des ordinateurs peuvent stocker des nombre qui pèsent jusqu'à 64 bits.<br>
+      <h2>Introduction</h2> 
+      Dans un ordinateur, les données sont sotckées et transmises à l'aides de transistors qui ne peuvent prendre que
+      deux états : le 0 et le 1.<br>
+      L'unité de mesure en informatique est donc le binaire (0, 1) contrairement au décimal dans la vie de tous les
+      jours. Pour faire des opérations, les ordinateurs regroupent les nombre binaires par groupes de 8. C'est
+      l'octet.<br>
+      De nos jours, la grande majorité des ordinateurs peuvent stocker des nombre qui pèsent jusqu'à 64 bits.<br>
 
-        <h3>Définitions</h3>
-<ul>
-                    <li><strong>Base Numérique :</strong> Le nombre de chiffres utilisés (ex: 10 en décimal, 2 en binaire).</li>
-                    <li><strong>Poids d'un chiffre :</strong> La position du chiffre dans le nombre détermine sa puissance de contribution.</li>
-                </ul>
+      <h3>Définitions</h3>
+      <ul>
+        <li><strong>Base Numérique :</strong> Le nombre de chiffres utilisés (ex: 10 en décimal, 2 en binaire).</li>
+        <li><strong>Poids d'un chiffre :</strong> La position du chiffre dans le nombre détermine sa puissance de
+          contribution. Le bit le plus à gauche est le bit de poids fort et le bit le plus à droite est le bit de poids
+          faible.</li>
+      </ul>
 
-        <h3>I - Représentation binaire d'un entier naturel</h3>
-        Pour représenter un entier naturel en binaire, il faut passer de la base 10 à la base 2. Cela signifie qu'au lieu d'utiliser les 10 chiffres (0,1,2,3,4,5,6,7,8,9) on n'utilise plus que deux (0,1).<br>
-        Pour convertir, la méthode la plus simple est de faire des visisions successives par 2 du nombre jusqu'à ce que le quotient soit égal à zéro. Après, il faut assembler tous les restes des divisions en partant de la dernière jusqu'à la première, et voilà le nombre binaire.<br>
-       
+      <h3>I - Représentation binaire d'un entier naturel</h3>
+      Pour représenter un entier naturel en binaire, il faut passer de la base 10 à la base 2. Cela signifie qu'au lieu
+      d'utiliser les 10 chiffres (0,1,2,3,4,5,6,7,8,9) on n'utilise plus que deux (0,1).<br>
+      Pour convertir, la méthode la plus simple est de faire des divisions successives par 2 du nombre jusqu'à ce que le
+      quotient soit égal à zéro. Après, il faut assembler tous les restes des divisions en partant de la dernière
+      jusqu'à la première, et voilà le nombre binaire.<br><br>
+      <li><a href="https://www.youtube.com/watch?v=T2bdGEggkIY&pp=ygUZY29udmVydGlyIGRlY2ltYWwgYmluYWlyZQ%3D%3D">Une
+          vidéo pour convertir un nombre décimal en nombre binaire</a></li>
+      <li><a href="https://www.youtube.com/watch?v=IAbX7eUT2Qc&pp=ygUaY29udmVydGlyIGJpbmFpcmUgZGVjaW1hbCA%3D">Une autre
+          vidéo pour convertir un nombre binaire en nombre décimal</a></li>
+      <br>
+      Voici quelques puissances de 2 à connaître par coeur :
+      <div class="agrandir-image">
+        <img src="/ressources/fiche5/puissances-de-2.jpg" alt="Table ASCII" width="600px">
+      </div><br>
+      <h3>Mémoire d'un ordinateur et binaire et additions</h3>
+      Avec une mémoire de <span class="surligner-en-gris">n</span> bits, on peut écrire <span
+        class="surligner-en-gris">2**n</span> nombre qui vont de <span class="surligner-en-gris">0</span> à <span
+        class="surligner-en-gris">2**n-1</span>
+      Attention, si on veut additionner deux nombre binaires, il faut que la mémoire ait assez de place pour contenir le
+      résultat. Dans le cas contraire, le bit de poid fort est perdu ce qui fausse le résultat.<br>
+      Pour additionner nous procédons comme en base 10 à une exception près. Il faut retenir que <span
+        class="surligner-en-gris">b1+b1=b10</span> (alors que en base 10 <span class="surligner-en-gris">1+2=2</span>).
+      <h3>L'écriture hexadécimale</h3>
+      L'écriture hexadécimale possède 16 chiffres : <span class="surligner-en-gris">0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B,
+        C, D, E, et F</span>.<br><br>
+      Voici un tableau qui permet de mieux comprendre :
+      <div class="agrandir-image">
+        <img src="/ressources/fiche5/tableau_hexa-889978436.png" alt="Table ASCII" width="600px">
+      </div><br>
+      Encore des vidéos :
 
-        <h3>II - Mémoire d'un ordinateur et binaire</h3>
-        Avec une mémoire de n bits, on peut écrire 2**n nombre qui vont de 0 à 2**n-1
-        Attention, si on veut additionner deux nombre binaires, il faut que la mémoire ait assez de place pour contenir le résultat. Dans le cas contraire, le bit de poid fort est perdu ce qui fausse le résultat.<br>
-        
+      <li><a href="https://www.youtube.com/watch?v=ZDbvNzxPPXI&t=142s">Déterminer l'écriture hexadécimale d'un nombre en
+          base 10</a></li>
+      <li><a href="https://www.youtube.com/watch?v=jEeptIOD014&t=25s">Convertir hexadécimal en décimal</a></li>
+      <li><a href="https://www.youtube.com/watch?v=2TDTZQmcyWE&t=22S">Convertir hexadécimal en binaire</a></li>
 
     </details>
-    
-
-
-
-
-
-
-    <h2>I- Premières consignes</h2>
-    <h3>Matériel pour la NSI</h3>
-    <li>Un ordinateur</li>
-    <li>Une clé USB</li>
-    <li>Un classeur avec les fiches de NSI</li>
-    <li>Une calculatrice</li>
-
-    <h3>Organisation durant l'année</h3>
-    <li>4h de cours par semaine</li>
-    <li>Des devoirs d'un cours à l'autre</li>
-    <li>Des évaluations sur les compétences travaillées</li>
-
-    <div id="bloc-ressources">
-      <strong>Logiciels à télécharger :</strong><br>
-      <a href="https://www.python.org/downloads/">Python</a><br>
-      <a href="https://www.geany.org/download/releases/">Geany</a><br>
-      <a href="https://pyzo.org/start.html">Pyzo</a><br>
-      Et d'autres logiciels qui seront donnés pendant l'année.
-    </div>
-    <h2>II- Le programme au cours de l'année</h2>
-    <li>L'histoire de l’informatique</li>
-    <li>Représentations des données : types et valeurs de base</li>
-    <li>Représentation des données : types construits</li>
-    <li>Traitement de données en table</li>
-    <li>Interactions entre l’homme et la machine sur le web</li>
-    <li>Architectures matérielles et systèmes d’exploitation</li>
-    <li>Langages et programmation</li>
-    <li>Algorithmique</li>
     <details open>
-      <summary>III- Bibliographie</summary>
-      <p>
-        Les cours de l’année ont été en partie réalisés grâce aux ouvrages suivants :
-        <li>Apprendre à programmer avec Python 3 - Gérard Swinnen (Eyrolles)</li>
-        <li>Apprendre la programmation par le jeu - Vincent Maille - Ellipses</li>
-        <li>Numérique et sciences informatiques - Première - Stéphane Pasquet - Nathan</li>
-        <li>Numérique et sciences informatiques - Première - Serge Bays - Ellipses</li>
-        <li>Numérique et sciences informatiques - Première - Cécile Canu - Ellipses</li>
-        <li>Numérique et sciences informatiques - Première - Thibaut Balabonski, Sylvain Conchon, Jean-Christophe
-          Filliâtre, Kim Nguyen - Ellipses</li>
-        <li>Sciences numériques et technologie - 2nde - Hachette Education</li>
-        <li>Prépabac NSI - Première Générale - Hatier</li>
-        <li>et d’autres sources trouvées sur internet ou d’autres livres spécifiques à la partie abordée</li>
-      </p>
-
+      <summary>Fiche 5.2 - Les nombres réels</summary>
+      La notation binaire permet de représenter les nombres à virgule. En notation décimale, les chiffres de gauche
+      représentent les unité, le sdizaines et ainsi de suice. Ceux à droite de la virgule, les dixièmes, les centièmes
+      etc.
+      En notation binaire, les chiffres à droite de la virgule représentent les demis, le squarts, les huitièmes
+      etc.<br>
+      Cette notation possède malgré tout un problème : on ne peut pas représenter de manière exacte certains nombres
+      (comme 2,1). Leur écriture en Python (type float), sera donc approximative.<br>
+      Pour tester une égalité entre deux nombres de type float en Python, il faut procéder ainsi :
+      <table border="2px">
+        <tr>
+          <td width="200px">Bonne manière</td>
+          <td width="200px">Mauvaise manière</td>
+        </tr>
+        <tr>
+          <td>
+            <div id="bloc-de-code">|a-b| &lt; 10**9</div>
+          </td>
+          <td>
+            <div id="bloc-de-code">a == b</div>
+          </td>
+        </tr>
+      </table>
+      <a href="https://www.youtube.com/watch?v=Jk9Tl3MR1KM&pp=ygUTbm9tYnJlIHJlZWwgYmluYWlyZQ%3D%3D">Une vidéo pour
+        expliquer la conversion d'un nombre réel base 10 en un nombre réel base 2.</a>
     </details>
+
+    <details open>
+      <summary>Fiche 5.3 - Les entiers relatifs</summary>
+      Les entiers relatifs désignent les nombres entiers positifs et négatifs. En informatique, on parle d'<strong>entiers signés</strong> et d'<strong>entiers non signés</strong><br>
+      Comment représenter en binaire l'écriture d'un nombre négatif ?<br>
+      Pour faire cela, l'ordinateur réserve le bit de poids fort (le plus à gauche) pour déterminer le signe du nombre.<br>
+      Si le signe positif le bit de poids fort vaut 0. Dans le cas contraire le bit de poids fort vaut 1.<br>
+      Les autres nombres représentent la valeur absolue de ce nombre. 
+      Une autre méthode pour représenter les nombrs négatifs en binaire est la méthode du <a href="https://fr.wikipedia.org/wiki/Compl%C3%A9ment_%C3%A0_deux">Complément à 2</a>.
+    </details>
+
+    <div id="modal" class="modal">
+      <span class="close">&times;</span>
+      <img id="modalImg" src="" alt="">
+    </div>
+
   </div>
 </body>
 <script>
@@ -117,6 +142,28 @@
         });
       })();
     })
+
+  /*Gestion des images de la page*/
+  const images = document.querySelectorAll('.agrandir-image img');
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = document.querySelector('.close');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src.replace('200x150', '800x600');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // empêche de scroller dans le fond
+    });
+  });
+
+  // Fermer si on clique sur la croix ou le fond noir
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target === closeBtn) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
 </script>
 
 </html>

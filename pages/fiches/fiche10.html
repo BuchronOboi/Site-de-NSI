@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="clair">
+
+<head>
+    <title> NSI - Clément LEVAL </title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/styles/style_principal.css" type="text/css" />
+</head>
+
+<body>
+    <div id="entete-de-page">
+        NSI - Clément LEVAL
+    </div><br>
+    <div id="menu-placeholder"></div>
+
+
+    <div id="grand-texte"> Fiche 10 - Les systèmes d'exploitation</div>
+    <div id="bloc-ressources"><strong>Ressources :</strong><br>
+        <a href="/ressources/fiche10/fiche10pdf.pdf">PDF de la fiche 10</a><br>
+    </div>
+    <div id="contenu">
+        <h2>Introduction</h2>
+        <h3>Les systèmes d'exploitation sur ordinateurs</h3>
+        Le premier système d'exploitation multi-tâches est UNIX. Il a été créé en 1970 et a été développé jusqu'en
+        1990.<br>
+        A partir de ce système d'exploitation, d'autres ont été créés comme MS-DOS qui donnera Windows NT<br>
+        Aussi à partir de 1984, Apple a développé Mac OS, son système d'exploitation conçu pour fonctionner uniquement
+        sur les ordinateurs de la marque.<br>
+        En 1991, Linux apparait. <br>
+        <h3>Les systèmes d'exploitation sur téléphones mobiles</h3>
+        En 2007, Apple donne naissance à iOS lors de la présentation du Premier iPhone.<br>
+        Seulement un an plus tard en 2008, Android est annoncé par Google pour toutes les autres marques de téléphones.
+        <h3>Mais qu'est-ce qu'un système d'exploitation ?</h3>
+        C'est un programme qui fait l'intermédiaire entre la machine et l'humain. Il gère les ressources matérielles
+        (CPU, mémoire, périphériques) et fournit une interface entre l’utilisateur et le matériel.<br>
+        Plus techniquement :
+        <li>
+            Il gère des processus : Lancer, suspendre, terminer des programmes.
+        </li>
+        <li>
+            Il gère de la mémoire : Allouer/désallouer la RAM aux processus.
+        </li>
+        <li>
+            Il gère les fichiers : Organiser, stocker, retrouver les données (systèmes de fichiers comme ext4, NTFS).
+        </li>
+        <li>
+            Il gère les périphériques : Pilotes pour communiquer avec le matériel (imprimante, clavier, etc.).
+        </li>
+        <li>
+            Il a une interface utilisateur : CLI (ligne de commande) ou GUI (graphique).
+        </li>
+        <div class="agrandir-image">
+            <img src="/ressources/fiche10/fonctionnement_systeme_d_exploitation.png" alt="Table ASCII" width="150px">
+        </div><br>
+        Linux, Windows et Mac OS constituent les trois systèmes d'exploitation les plus utilisés aujourd'hui sur
+        ordinateur.<br>
+        Sur les téléphones, Android et iOS perdurent et existent toujours.
+        <h2>Les fichiers</h2>
+        Un fichier est une unité de stockage sur un support (qui peut être une clé USB, un disque dur, etc.).<br>
+        Il se caractérise par un nom unique, une extension (.txt - .png) et son emplacement dans l'arborescence de
+        fichiers.<br>
+        Un ficheir occupe une certaine place dans le support de stockage et l'utilisateur peut y accéder ou non en
+        fonction des permissions sur ce fichier (droits de lecture, d'écriture, d'exécution).
+        <h3>Permissions sur les fichiers</h3>
+        Voici un tableau qui récapitule bien les permissions sur les fichiers.<br><br>
+        <div class="agrandir-image">
+            <img src="/ressources/fiche10/permissionsfichiers.jpg" alt="Les permissions sur les fichiers" width="600px">
+        </div><br>
+        Sur Linux, nous pouvons changer les droits attribués aux fichiers avec la commande <span class="surligner-en-gris">chmod</span> .
+        Cette commande se complète avec trois parties : les droits attribuées à l'utilisateur, ceux du groupe, et les droits attribués aux autres.<br>
+        <h2>Quelques commandes utiles pour la gestion des fichiers sous Linux</h2>
+        <div class="agrandir-image">
+            <img src="/ressources/fiche10/tableauxcommandes.png" alt="Table ASCII" width=" 600px">
+        </div><br>
+
+
+
+
+
+        <div id="modal" class="modal">
+            <span class="close">&times;</span>
+            <img id="modalImg" src="" alt="">
+        </div>
+
+</body>
+<script>
+
+    fetch("/pages/menu.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("menu-placeholder").innerHTML = data;
+            (function initTheme() {
+                const body = document.body;
+                if (localStorage.getItem('theme') === 'dark') {
+                    body.classList.add('dark-mode');
+                }
+                const toggles = document.querySelectorAll('.theme-toggle');
+                toggles.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        body.classList.toggle('dark-mode');
+                        const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+                        localStorage.setItem('theme', theme);
+                    });
+                });
+            })();
+        })
+    /*Gestion des images de la page*/
+    const images = document.querySelectorAll('.agrandir-image img');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.querySelector('.close');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            modalImg.src = img.src.replace('200x150', '800x600');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // empêche de scroller dans le fond
+        });
+    });
+
+    // Fermer si on clique sur la croix ou le fond noir
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target === closeBtn) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+</script>
+
+</html>

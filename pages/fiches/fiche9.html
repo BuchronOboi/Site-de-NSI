@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="clair">
+
+<head>
+    <title> NSI - Clément LEVAL </title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/styles/style_principal.css" type="text/css" />
+</head>
+
+<body>
+    <div id="entete-de-page">
+        NSI - Clément LEVAL
+    </div><br>
+    <div id="menu-placeholder"></div>
+
+
+    <div id="grand-texte"> Fiche 9 - Composition et fonctionnement d'un ordinateur</div>
+    <div id="bloc-ressources"><strong>Ressources :</strong><br>
+        <a href="/ressources/fiche9/fiche9pdf.pdf">PDF de la fiche 9</a><br>
+        
+    </div>
+    <div id="contenu">
+        <h2>Introduction</h2>
+        Au fils du temps, les hommes ont inventé des machines de plus en plus élaborées :
+        <li>Avant 1900 : les machines mécaniques</li>
+        <li>De 1900 à 1939 : les machines électromécaniques</li>
+        <li>De 1940 à 1955 : les machines à tubes</li>
+        <li>De 1947 à 1965 : les machines à transistors</li>
+        <li>De 1965 à 1977 : les machines à circuits intégrés</li>
+        <li>De 1977 jusqu'à aujourd'hui : les micro-ordinateurs</li>
+        Plus d'informations sur <a href="https://histoire.info.online.fr/micro.html">ce lien</a><br>
+        <h2>De quoi est composé un ordinateur ?</h2>
+        Un ordinateur est composé de l'unité centrale et de périphériques extrernes.<br>
+        <strong>L'unité centrale</strong> regroupe les éléments suivants :
+        <li>L'alimentation</li>
+        <li>La carte mère</li>
+        <li>Le processeur et son refroidissement</li>
+        <li>La RAM</li>
+        <li>La carte graphique (parfois optionnel car elle est intégrée au processeur)</li>
+        <li>Le ou les disques durs</li>
+        Elle peut accueillir en options différents éléments :
+        <li>Un lecteur CD</li>
+        <li>Un lecteur disquette sur les vieux PC</li>
+        <li>Des cartes connectées aux ports PCI (comme une carte son, une carte d'imprimante etc.)</li>
+        <strong>Les périphériques externes :</strong>        
+        <li>Peuvent se brancher au dos de la carte mère sur différents ports (USB-A, USB-C, HDMI, Displayport, VGA, DVI, port série, Ethernet, PS/2...).</li>
+        <li>Ces périphériques peuvent être des écrans, des claviers, des souris, des webcams, des enceintes, des imprimantes etc...</li>
+        <br>
+        C'est la carte mère qui relie tous les composants. Elle fait communiquer les composants entre eux grâce au Chipset qui gère les flux de données.<br>
+        C'est <strong>l'architecture de Von Neumann</strong> qui est utilisée pour construire les ordinateurs de nos jours. Cette architecture propose quatre grands éléments :
+        <li>L'unité centrale qui calcule et qui contrôle le reste de l'ordinateur</li>
+        <li>La mémoire centrale qui stocke les programmes et les données</li>
+        <li>Les périphériques qui permet à la machine d'interagir avec le monde extérieur</li>
+        <li>Le Bus qui est un canal de communication</li>
+<h2>Un TP pour comprendre le fonctionnement d'un ordinateur</h2>
+Le TP est disponible dans <a href="/ressources/fiche9/pdf_fiche9">le PDF de la fiche 9.</a>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+<script>
+    fetch("/pages/menu.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("menu-placeholder").innerHTML = data;
+            (function initTheme() {
+                const body = document.body;
+                if (localStorage.getItem('theme') === 'dark') {
+                    body.classList.add('dark-mode');
+                }
+                const toggles = document.querySelectorAll('.theme-toggle');
+                toggles.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        body.classList.toggle('dark-mode');
+                        const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+                        localStorage.setItem('theme', theme);
+                    });
+                });
+            })();
+        })
+</script>
+
+</html>

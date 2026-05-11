@@ -16,23 +16,126 @@
 
     <div id="grand-texte"> Fiche 8 - La diversité des langages de programmation</div>
     <div id="bloc-ressources"><strong>Ressources :</strong><br>
-        <a href="/ressources/fiche7/Fiche7_1.pdf">PDF de la fiche 8</a><br>
-        Sur <a href="https://fr.wikipedia.org/wiki/Histoire_des_langages_de_programmation">ce lien</a>, il y a une liste de tous les langages de programmation crées au fil des années.
+        <a href="/ressources/fiche8/fiche8pdf.pdf">PDF de la fiche 8</a><br>
+        Sur <a href="https://fr.wikipedia.org/wiki/Histoire_des_langages_de_programmation">ce lien</a>, il y a une liste
+        de tous les langages de programmation crées au fil des années.
     </div>
     <div id="contenu">
         <h2>Introduction</h2>
-        A la base, un ordinateur fonctionne grâce au langage binaire (des 0 et des 1) ce qui est peu compréhensible pour l'être humain. Les ingénieurs ont donc créé des langages qui permettent de mieux traduire les instruction vers l'ordinateur.<br>
-        Les langages de programmations peuvent être classés "du plus bas niveau" jusqu'au "plus haut niveau". Plus un langage est bas niveau, plus ce langage est proche de l'ordinateur. L'assembleur est le langage le plus bas niveau qui existe, c'est-à-dire qu'il y a très peu d'intermédiaire entre ce que l'on code dans le fichier et ce que le PC reçoit. Les langages haut niveau, sont plus utilisés aujourd'hui car ils sont plus simple à comprendre (Python créé en 1991, qui est presque de l'anglais).<br>        
+        A la base, un ordinateur fonctionne grâce au langage binaire (des 0 et des 1) ce qui est peu compréhensible pour
+        l'être humain. Les ingénieurs ont donc créé des langages qui permettent de mieux traduire les instruction vers
+        l'ordinateur.<br>
+        Les langages de programmations peuvent être classés "du plus bas niveau" jusqu'au "plus haut niveau". Plus un
+        langage est bas niveau, plus ce langage est proche de l'ordinateur. L'assembleur est le langage le plus bas
+        niveau qui existe, c'est-à-dire qu'il y a très peu d'intermédiaire entre ce que l'on code dans le fichier et ce
+        que le PC reçoit. Les langages haut niveau, sont plus utilisés aujourd'hui car ils sont plus simple à comprendre
+        (Python créé en 1991, qui est presque de l'anglais).<br>
         <h2>Similitudes entre langages de programmation</h2>
         <li>Tous les langages de programmation utilisent des commentaires</li>
         <li>Les langages ont tous des structures conditionelles et des boucles</li>
-        <li>Ils ont tous des fonctions souvent définies par <span class="surligner-en-gris">function</span> ou <span class="surligner-en-gris">def</span>.</li>
-        <li>Dans tous les langages, il y a la possibilité de créer des variables, mais leur initialisation change énormément d'un langage à un autre.</li>
+        <li>Ils ont tous des fonctions souvent définies par <span class="surligner-en-gris">function</span> ou <span
+                class="surligner-en-gris">def</span>.</li>
+        <li>Dans tous les langages, il y a la possibilité de créer des variables, mais leur initialisation change
+            énormément d'un langage à un autre.</li>
 
-    </div>
-    <div id="modal" class="modal">
-        <span class="close">&times;</span>
-        <img id="modalImg" src="" alt="">
+        <table border="1">
+            <tr>
+                <th style="width: 130px;"></th>
+                <th style="width: 350px;">Python</th>
+                <th style="width: 370px;">C++</th>
+                <th style="width: 350px;">javascript</th>
+            </tr>
+            <tr>
+                <td><strong>Affectations</strong></td>
+                <td>a, texte =32, "Bonjour"</td>
+                <td>int a = 3;</td>
+                <td>var a = 76</td>
+            </tr>
+            <tr>
+                <td><strong>Fonctions</strong></td>
+                <td>
+                    <div id="bloc-de-code">1 math import sqrt<br>
+                        2 def hypot(a,b):<br>
+                        3 &nbsp;&nbsp;&nbsp;return sqrt(a**2+b**2)</div>
+                </td>
+                <td>
+                    <div id="bloc-de-code">1 include &lt;iostream&gt;<br>
+                        2 int main() &#123;<br>
+                        3 &nbsp;&nbsp;&nbsp;std::cout&lt;&lt;"Bonsoir"&lt;&lt;endl;<br>
+                        4 &#125;</div>
+                </td>
+                <td>
+                    <div id="bloc-de-code">1 hypot(a, b) {<br>
+                        2 return Math.sqrt(a**2+b**2);<br>
+                        3 }</div>
+                </td>
+
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Instructions conditionelles</strong></td>
+                <td>
+                    <div id="bloc-de-code">1 if a==b:<br>
+                        2 &nbsp;&nbsp;&nbsp;a=a+1<br>
+                        3 else :<br>
+                        4 &nbsp;&nbsp;&nbsp;a=a-1
+                    </div>
+                </td>
+                <td>
+                    <div id="bloc-de-code">1 if (a==b) {<br>
+                        2 &nbsp;&nbsp;&nbsp;a = a + 1;}<br>
+                        3 else {a=a-1;}</div>
+                </td>
+                </td>
+                <td>
+                    <div id="bloc-de-code">1 if (a==b){<br>
+                        2 &nbsp;&nbsp;&nbsp;a=a+1;}<br>
+                        3 else {a=a-1;}</div>
+                </td></tr>
+
+
+            <tr>
+                <td><strong>Boucles tant que</strong></td>
+                <td>
+                    <div id="bloc-de-code">1 while a<=b :<br>
+                            2 &nbsp;&nbsp;&nbsp;a=a+1</div>
+                </td>
+                </td>
+                <td>
+                    <div id="bloc-de-code">1 while(a<=b ){<br>
+                            2 &nbsp;&nbsp;&nbsp;a=a+1;}</div>
+                </td>
+                <td>
+                    <div id="bloc-de-code">1 while(a<=b){<br>
+                            2 &nbsp;&nbsp;&nbsp;a=a+1;}</div>
+
+                </td>
+                
+
+
+            </tr>
+            <tr>
+                <td><strong>Boucles for</strong>
+                <td>
+                    <div id="bloc-de-code">1 p=1<br>
+                        2 for i in range(4):<br>
+                        3 &nbsp;&nbsp;&nbsp;p=p*i</div>
+                </td>
+                <td>
+                    <div id="bloc-de-code">1 int p=1<br>
+                        2 for (int i=0;i<5;i++){<br>
+                            3 &nbsp;&nbsp;&nbsp;p=p*i;}
+                    </div>
+                </td>
+                <td>
+                    <div id="bloc-de-code">1 int p=1<br>
+                        2 for (int i=0;i<5;i++){<br>
+                            3 &nbsp;&nbsp;&nbsp;p=p*i;}
+                    </div>
+                </td>
+            </tr>
+        </table>
+
     </div>
 </body>
 <script>
